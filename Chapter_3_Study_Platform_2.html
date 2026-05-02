@@ -1,0 +1,2083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 3 — Social Attitudes & Science | Study Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0f0e0c;
+  --bg-2: #161410;
+  --bg-3: #1d1a14;
+  --ink: #e8e3d4;
+  --ink-muted: #a39d8c;
+  --ink-dim: #6b6759;
+  --gold: #c9a96e;
+  --gold-soft: #b8985f;
+  --rule: rgba(201, 169, 110, 0.15);
+  --rule-strong: rgba(201, 169, 110, 0.35);
+
+  /* branch colours */
+  --b1: #c9a96e; /* Pure vs Applied — gold (foundation) */
+  --b2: #d4a574; /* American Functionalists — warm amber */
+  --b3: #93a17a; /* Applied Pioneers — sage */
+  --b4: #6b8a93; /* Politics of Research — muted teal */
+  --b5: #b08585; /* Prejudice — muted rose */
+  --b6: #8a85a8; /* Modern Snobbery — lavender slate */
+
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "DM Sans", -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.65;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  background-image:
+    radial-gradient(circle at 15% 8%, rgba(201, 169, 110, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 85% 90%, rgba(176, 133, 133, 0.03) 0%, transparent 35%);
+  background-attachment: fixed;
+}
+
+/* ───── Typography ───── */
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; letter-spacing: 0.005em; }
+.eyebrow { font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
+.italic { font-style: italic; color: var(--ink-muted); }
+
+/* ───── Header ───── */
+.masthead {
+  padding: 8rem 2rem 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+}
+.masthead::before {
+  content: "✦";
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+.chapter-num {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--gold);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+.masthead h1 {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  line-height: 1.1;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  max-width: 900px;
+}
+.masthead h1 em { color: var(--gold); font-weight: 400; }
+.masthead .deck {
+  font-size: 1.1rem;
+  color: var(--ink-muted);
+  max-width: 700px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+.masthead .meta {
+  margin-top: 3rem;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  font-size: 0.78rem;
+  color: var(--ink-dim);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.masthead .meta span strong { color: var(--gold); font-weight: 500; }
+
+/* ───── Sticky Nav ───── */
+.nav-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(15, 14, 12, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--rule);
+}
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.nav-brand {
+  font-family: var(--serif);
+  color: var(--gold);
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  flex: 1;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  color: var(--ink-muted);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.nav-links a:hover { color: var(--gold); }
+.search-wrap { position: relative; }
+.search-wrap input {
+  background: var(--bg-2);
+  border: 1px solid var(--rule);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  padding: 0.55rem 0.8rem 0.55rem 2.2rem;
+  width: 220px;
+  outline: none;
+  transition: border-color 0.2s, width 0.3s;
+}
+.search-wrap input:focus { border-color: var(--gold); width: 280px; }
+.search-wrap::before {
+  content: "⌕";
+  position: absolute;
+  left: 0.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold);
+  font-size: 1rem;
+}
+
+/* Branch filter chips */
+.filter-bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.filter-bar .label { color: var(--ink-dim); margin-right: 0.5rem; font-weight: 500; }
+.chip {
+  background: transparent;
+  border: 1px solid var(--rule);
+  color: var(--ink-muted);
+  padding: 0.4rem 0.9rem;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+.chip[data-active="true"] {
+  border-color: var(--gold);
+  color: var(--bg);
+  background: var(--gold);
+}
+.chip:hover { border-color: var(--gold); }
+
+/* ───── Main layout ───── */
+main { max-width: 1200px; margin: 0 auto; padding: 5rem 2rem; }
+
+section { margin-bottom: 7rem; }
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+.section-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 2rem;
+  color: var(--gold);
+  font-weight: 400;
+}
+.section-header h2 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  flex: 1;
+}
+
+/* ───── Big Picture / Mind Map ───── */
+.bigpic-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+.mindmap {
+  background: var(--bg-2);
+  border: 1px solid var(--rule);
+  padding: 2rem;
+  position: relative;
+}
+.mindmap svg { width: 100%; height: auto; max-width: 1100px; margin: 0 auto; display: block; }
+.mindmap-caption {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-style: italic;
+  color: var(--ink-muted);
+  font-family: var(--serif);
+  font-size: 1.05rem;
+}
+.bigpic-text {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.bigpic-card {
+  background: var(--bg-2);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--gold);
+  padding: 2rem 2rem 2.2rem;
+}
+.bigpic-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--gold);
+  font-weight: 500;
+}
+.bigpic-card p { color: var(--ink); font-size: 0.95rem; line-height: 1.75; }
+.bigpic-card p + p { margin-top: 0.8rem; }
+
+/* ───── Branch sections ───── */
+.branch {
+  margin-bottom: 6rem;
+  scroll-margin-top: 100px;
+}
+.branch-header {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+.branch-marker {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 500;
+  position: relative;
+  background: var(--bg-2);
+}
+.branch-marker::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid currentColor;
+  opacity: 0.4;
+}
+.branch-meta { padding-top: 0.4rem; }
+.branch-meta .eyebrow { display: block; margin-bottom: 0.5rem; }
+.branch-meta h3 {
+  font-size: 1.9rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+}
+.branch-meta .lede {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--ink-muted);
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* Connecting prose between branches/cards */
+.story {
+  background: var(--bg-2);
+  padding: 2rem 2.5rem;
+  border-left: 2px solid currentColor;
+  margin: 2rem 0 2.5rem;
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--ink);
+  font-style: italic;
+}
+.story strong { color: var(--gold); font-weight: 500; font-style: normal; }
+.story.nostalgia { font-style: normal; }
+
+/* Concept cards grid */
+.concepts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 1.25rem;
+}
+.concept {
+  background: var(--bg-2);
+  border: 1px solid var(--rule);
+  border-top: 3px solid currentColor;
+  transition: border-color 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+.concept:hover { border-color: var(--rule-strong); }
+.concept summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.5rem 1.5rem 1.4rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  user-select: none;
+  position: relative;
+}
+.concept summary::-webkit-details-marker { display: none; }
+.concept-num {
+  font-family: var(--serif);
+  font-style: italic;
+  color: currentColor;
+  font-size: 1.1rem;
+  min-width: 2rem;
+  font-weight: 500;
+  padding-top: 0.1rem;
+}
+.concept-title {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  line-height: 1.25;
+  color: var(--ink);
+  font-weight: 500;
+  flex: 1;
+}
+.toggle-icon {
+  color: currentColor;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  transition: transform 0.25s;
+  font-family: var(--serif);
+  font-weight: 300;
+  align-self: center;
+}
+.concept[open] .toggle-icon { transform: rotate(45deg); }
+
+.concept-body {
+  padding: 0 1.5rem 1.6rem;
+  border-top: 1px solid var(--rule);
+  margin-top: 0.5rem;
+  padding-top: 1.2rem;
+  font-size: 0.92rem;
+}
+.concept-body dl { margin: 0; }
+.concept-body dt {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: currentColor;
+  font-weight: 600;
+  margin-top: 1.1rem;
+  margin-bottom: 0.4rem;
+  opacity: 0.95;
+}
+.concept-body dt:first-of-type { margin-top: 0; }
+.concept-body dd {
+  color: var(--ink);
+  line-height: 1.7;
+  margin-left: 0;
+  font-size: 0.93rem;
+  font-weight: 300;
+}
+.concept-body dd em { color: var(--ink-muted); font-style: italic; }
+.concept-body .model-answer {
+  background: var(--bg-3);
+  border-left: 2px solid currentColor;
+  padding: 1rem 1.2rem;
+  margin-top: 0.5rem;
+  font-family: var(--serif);
+  font-size: 0.97rem;
+  line-height: 1.65;
+  color: var(--ink);
+}
+.concept-body .model-answer::before {
+  content: "Model answer";
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: currentColor;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-style: normal;
+}
+
+/* Branch colour assignment */
+.b1 { color: var(--b1); }
+.b2 { color: var(--b2); }
+.b3 { color: var(--b3); }
+.b4 { color: var(--b4); }
+.b5 { color: var(--b5); }
+.b6 { color: var(--b6); }
+
+/* ───── Mistakes ───── */
+.mistakes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.25rem;
+}
+.mistake {
+  background: var(--bg-2);
+  border: 1px solid var(--rule);
+  padding: 1.6rem 1.8rem 1.8rem;
+  position: relative;
+}
+.mistake::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 40px; height: 2px;
+  background: var(--b5);
+}
+.mistake h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.8rem;
+  color: var(--ink);
+  font-weight: 500;
+}
+.mistake .wrong, .mistake .right {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  margin-top: 0.7rem;
+  padding: 0.7rem 0.9rem;
+  font-weight: 300;
+}
+.mistake .wrong {
+  background: rgba(176, 133, 133, 0.08);
+  border-left: 2px solid var(--b5);
+}
+.mistake .right {
+  background: rgba(147, 161, 122, 0.08);
+  border-left: 2px solid var(--b3);
+}
+.mistake .label {
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.mistake .wrong .label { color: var(--b5); }
+.mistake .right .label { color: var(--b3); }
+
+/* ───── Tables ───── */
+.table-wrap {
+  margin-bottom: 3rem;
+  background: var(--bg-2);
+  border: 1px solid var(--rule);
+  overflow-x: auto;
+}
+.table-wrap h4 {
+  padding: 1.3rem 1.6rem 1rem;
+  font-size: 1.25rem;
+  color: var(--gold);
+  font-weight: 500;
+  border-bottom: 1px solid var(--rule);
+  letter-spacing: 0.005em;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+th, td {
+  padding: 0.95rem 1.6rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--rule);
+  line-height: 1.55;
+}
+th {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  background: var(--bg-3);
+}
+td { color: var(--ink); font-weight: 300; }
+td strong { color: var(--gold); font-weight: 500; }
+tr:last-child td { border-bottom: none; }
+
+/* ───── Checklist ───── */
+.checklist {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+.check-col {
+  background: var(--bg-2);
+  border: 1px solid var(--rule);
+  padding: 1.8rem 2rem 2rem;
+}
+.check-col h4 {
+  color: var(--gold);
+  font-size: 1.25rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--rule);
+  font-weight: 500;
+}
+.check-col label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 0.55rem 0;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-weight: 300;
+  color: var(--ink);
+  transition: color 0.2s;
+}
+.check-col label:hover { color: var(--gold); }
+.check-col input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--gold);
+  background: transparent;
+  cursor: pointer;
+  margin-top: 0.3rem;
+  position: relative;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+.check-col input[type="checkbox"]:checked { background: var(--gold); }
+.check-col input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  top: -3px; left: 1px;
+  color: var(--bg);
+  font-size: 13px;
+  font-weight: 700;
+}
+.check-col input[type="checkbox"]:checked + span { color: var(--ink-dim); text-decoration: line-through; }
+
+/* Filtering states */
+.concept[data-hidden="true"] { display: none; }
+.branch[data-hidden="true"] { display: none; }
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 3rem 2rem 4rem;
+  text-align: center;
+  color: var(--ink-dim);
+  font-size: 0.85rem;
+  max-width: 1200px;
+  margin: 4rem auto 0;
+}
+footer .ornament { color: var(--gold); margin-bottom: 1rem; font-size: 1rem; }
+footer p { font-family: var(--serif); font-style: italic; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--bg-3); border: 2px solid var(--bg); }
+::-webkit-scrollbar-thumb:hover { background: var(--gold-soft); }
+
+@media (max-width: 720px) {
+  .masthead { padding: 5rem 1.5rem 3rem; }
+  main { padding: 3rem 1.5rem; }
+  .branch-header { grid-template-columns: 50px 1fr; gap: 1.2rem; }
+  .branch-marker { width: 50px; height: 50px; font-size: 1.4rem; }
+  .branch-meta h3 { font-size: 1.5rem; }
+  .section-header { gap: 1rem; }
+  .section-num { font-size: 1.5rem; }
+  .section-header h2 { font-size: 1.6rem; }
+  nav { gap: 1rem; }
+  .nav-links { gap: 1rem; }
+  .search-wrap input { width: 160px; }
+  .search-wrap input:focus { width: 200px; }
+  .concepts { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="chapter-num">— Chapter Three —</div>
+  <h1>How do social attitudes <em>influence</em> science?</h1>
+  <p class="deck">Applied psychology, prejudice, and intellectual snobbery. The story of how class hierarchies, gender bias, and the inherited belief that "pure" knowledge is nobler than practical knowledge shaped the actual content, methods, and personnel of psychology as a discipline — and how that legacy still echoes in modern league tables and research funding.</p>
+  <div class="meta">
+    <span><strong>Course</strong>&nbsp;&nbsp;History &amp; Methods in Psychology</span>
+    <span><strong>Concepts</strong>&nbsp;&nbsp;42</span>
+    <span><strong>Branches</strong>&nbsp;&nbsp;6</span>
+    <span><strong>Period</strong>&nbsp;&nbsp;1859 — present</span>
+  </div>
+</header>
+
+<div class="nav-wrap">
+  <nav>
+    <span class="nav-brand">Ch. 3 · Study</span>
+    <div class="nav-links">
+      <a href="#bigpic">Big Picture</a>
+      <a href="#branches">Branches</a>
+      <a href="#mistakes">Mistakes</a>
+      <a href="#tables">Tables</a>
+      <a href="#checklist">Checklist</a>
+    </div>
+    <div class="search-wrap">
+      <input type="text" id="search" placeholder="Search concepts, names, dates…" aria-label="Search">
+    </div>
+  </nav>
+  <div class="filter-bar">
+    <span class="label">Filter by branch</span>
+    <button class="chip" data-filter="all" data-active="true">All</button>
+    <button class="chip" data-filter="b1" style="--c: var(--b1)">Pure vs Applied</button>
+    <button class="chip" data-filter="b2" style="--c: var(--b2)">Functionalism</button>
+    <button class="chip" data-filter="b3" style="--c: var(--b3)">Applied Pioneers</button>
+    <button class="chip" data-filter="b4" style="--c: var(--b4)">Politics of Research</button>
+    <button class="chip" data-filter="b5" style="--c: var(--b5)">Prejudice</button>
+    <button class="chip" data-filter="b6" style="--c: var(--b6)">Modern Snobbery</button>
+  </div>
+</div>
+
+<main>
+
+<!-- ════════════════════ 0 · BIG PICTURE ════════════════════ -->
+<section id="bigpic">
+  <div class="section-header">
+    <span class="section-num">0</span>
+    <h2>The Big Picture</h2>
+  </div>
+
+  <div class="bigpic-grid">
+
+    <!-- Mind map SVG -->
+    <div class="mindmap">
+      <svg viewBox="0 0 1100 720" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="hub" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#c9a96e" stop-opacity="0.25"/>
+            <stop offset="100%" stop-color="#c9a96e" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+
+        <!-- Connecting lines -->
+        <g stroke-width="1" fill="none" opacity="0.4">
+          <line x1="550" y1="360" x2="200" y2="160" stroke="#c9a96e"/>
+          <line x1="550" y1="360" x2="900" y2="160" stroke="#d4a574"/>
+          <line x1="550" y1="360" x2="160" y2="380" stroke="#93a17a"/>
+          <line x1="550" y1="360" x2="940" y2="380" stroke="#6b8a93"/>
+          <line x1="550" y1="360" x2="200" y2="600" stroke="#b08585"/>
+          <line x1="550" y1="360" x2="900" y2="600" stroke="#8a85a8"/>
+        </g>
+
+        <!-- Hub glow -->
+        <circle cx="550" cy="360" r="140" fill="url(#hub)"/>
+
+        <!-- Central hub -->
+        <circle cx="550" cy="360" r="92" fill="#161410" stroke="#c9a96e" stroke-width="1.5"/>
+        <circle cx="550" cy="360" r="100" fill="none" stroke="#c9a96e" stroke-width="0.5" opacity="0.4"/>
+        <text x="550" y="345" text-anchor="middle" fill="#c9a96e" font-family="Cormorant Garamond, serif" font-size="14" font-style="italic" letter-spacing="2">central question</text>
+        <text x="550" y="372" text-anchor="middle" fill="#e8e3d4" font-family="Cormorant Garamond, serif" font-size="17" font-weight="500">Social attitudes</text>
+        <text x="550" y="392" text-anchor="middle" fill="#e8e3d4" font-family="Cormorant Garamond, serif" font-size="17" font-weight="500">shape science</text>
+
+        <!-- Branch 1 — Pure vs Applied (top left) -->
+        <g>
+          <circle cx="200" cy="160" r="68" fill="#161410" stroke="#c9a96e" stroke-width="1"/>
+          <text x="200" y="135" text-anchor="middle" fill="#c9a96e" font-family="DM Sans, sans-serif" font-size="9" letter-spacing="2.5">BRANCH 1</text>
+          <text x="200" y="160" text-anchor="middle" fill="#e8e3d4" font-family="Cormorant Garamond, serif" font-size="15" font-weight="500">Pure vs</text>
+          <text x="200" y="180" text-anchor="middle" fill="#e8e3d4" font-family="Cormorant Garamond, serif" font-size="15" font-weight="500">Applied</text>
+          <text x="200" y="198" text-anchor="middle" fill="#a39d8c" font-family="Cormorant Garamond, serif" font-size="11" font-style="italic">Wundt · class · Europe</text>
+        </g>
+
+        <!-- Branch 2 — Functionalism (top right) -->
+        <g>
+          <circle cx="900" cy="160" r="68" fill="#161410" stroke="#d4a574" stroke-width="1"/>
+          <text x="900" y="135" text-anchor="middle" fill="#d4a574" font-family="DM Sans, sans-serif" font-size="9" letter-spacing="2.5">BRANCH 2</text>
+          <text x="900" y="160" text-anchor="middle" fill="#e8e3d4" font-family="Cormorant Garamond, serif" font-size="15" font-weight="500">Function-</text>
+          <text x="900" y="180" text-anchor="middle" fill="#e8e3d4" font-family="Cormorant Garamond, serif" font-size="15" font-weight="500">alism</text>
+          <text x="900" y="198" text-anchor="middle" fill="#a39d8c" font-family="Cormorant Garamond, serif" font-size="11" font-style="italic">James · Darwin · USA</text>
+        </g>
+
+        <!-- Branch 3 — Applied Pioneers (mid left) -->
+        <g>
+          <circle cx="160" cy="380" r="70" fill="#161410" stroke="#93a17a" stroke-width="1"/>
+          <text x="160" y="358" text-anchor="middle" fill="#93a17a" font-family="DM Sans, sans-serif" font-size="9" letter-spacing="2.5">BRANCH 3</text>
+          <text x="160" y="380" text-anchor="middle" fill="#e8e3d4" font-family="Cormorant Garamond, serif" font-size="15" font-weight="500">Applied</text>
+          <text x="160" y="400" text-anchor="middle" fill="#e8e3d4" font-family="Cormorant Garamond, serif" font-size="15" font-weight="500">Pioneers</text>
+          <text x="160" y="418" text-anchor="middle" fill="#a39d8c" font-family="Cormorant Garamond, serif" font-size="11" font-style="italic">Münsterberg · Witmer</text>
+        </g>
+
+        <!-- Branch 4 — Politics (mid right) -->
+        <g>
+          <circle cx="940" cy="380" r="70" fill="#161410" stroke="#6b8a93" stroke-width="1"/>
+          <text x="940" y="358" text-anchor="middle" fill="#6b8a93" font-family="DM Sans, sans-serif" font-size="9" letter-spacing="2.5">BRANCH 4</text>
+          <text x="940" y="380" text-anchor="middle" fill="#e8e3d4" font-family="Cormorant Garamond, serif" font-size="15" font-weight="500">Politics of</text>
+          <text x="940" y="400" text-anchor="middle" fill="#e8e3d4" font-family="Cormorant Garamond, serif" font-size="15" font-weight="500">Research</text>
+          <text x="940" y="418" text-anchor="middle" fill="#a39d8c" font-family="Cormorant Garamond, serif" font-size="11" font-style="italic">RAE · REF · Impact</text>
+        </g>
+
+        <!-- Branch 5 — Prejudice (bottom left) -->
+        <g>
+          <circle cx="200" cy="600" r="68" fill="#161410" stroke="#b08585" stroke-width="1"/>
+          <text x="200" y="578" text-anchor="middle" fill="#b08585" font-family="DM Sans, sans-serif" font-size="9" letter-spacing="2.5">BRANCH 5</text>
+          <text x="200" y="600" text-anchor="middle" fill="#e8e3d4" font-family="Cormorant Garamond, serif" font-size="15" font-weight="500">Prejudice</text>
+          <text x="200" y="620" text-anchor="middle" fill="#e8e3d4" font-family="Cormorant Garamond, serif" font-size="15" font-weight="500">vs Women</text>
+          <text x="200" y="638" text-anchor="middle" fill="#a39d8c" font-family="Cormorant Garamond, serif" font-size="11" font-style="italic">Experimentalists · Boring</text>
+        </g>
+
+        <!-- Branch 6 — Modern (bottom right) -->
+        <g>
+          <circle cx="900" cy="600" r="68" fill="#161410" stroke="#8a85a8" stroke-width="1"/>
+          <text x="900" y="578" text-anchor="middle" fill="#8a85a8" font-family="DM Sans, sans-serif" font-size="9" letter-spacing="2.5">BRANCH 6</text>
+          <text x="900" y="600" text-anchor="middle" fill="#e8e3d4" font-family="Cormorant Garamond, serif" font-size="15" font-weight="500">Modern</text>
+          <text x="900" y="620" text-anchor="middle" fill="#e8e3d4" font-family="Cormorant Garamond, serif" font-size="15" font-weight="500">Snobbery</text>
+          <text x="900" y="638" text-anchor="middle" fill="#a39d8c" font-family="Cormorant Garamond, serif" font-size="11" font-style="italic">League tables · Russell</text>
+        </g>
+
+        <!-- Decorative ornaments -->
+        <text x="550" y="32" text-anchor="middle" fill="#c9a96e" font-size="14">✦</text>
+        <text x="550" y="710" text-anchor="middle" fill="#c9a96e" font-size="14">✦</text>
+      </svg>
+      <p class="mindmap-caption">A central question radiates through six historical and conceptual branches. Each branch is a colour, used consistently throughout the platform.</p>
+    </div>
+
+    <!-- Big-picture cards -->
+    <div class="bigpic-text">
+      <div class="bigpic-card">
+        <h3>The central question</h3>
+        <p>How do pre-existing social attitudes — particularly the prejudice that "pure" intellectual work is nobler than practical work, and the prejudice against women — shape what gets studied, who gets to study it, and which methods are honoured as scientific?</p>
+        <p>Put another way: the chapter argues that science is not a neutral pursuit of truth. The choices Wundt, James, Münsterberg, Witmer, Binet and Boring made were not free choices made in a vacuum. They were shaped by class, gender, and national culture.</p>
+      </div>
+      <div class="bigpic-card">
+        <h3>Why it matters</h3>
+        <p><em>Scientifically</em>: If social attitudes can determine which questions count as scientific (Wundt) and who counts as a scientist (Boring's Experimentalists), then awareness of those attitudes is itself a methodological tool.</p>
+        <p><em>Practically</em>: The same dynamic produces today's university league tables, the funding gap between pure and applied work, and the persistent under-representation of women in senior positions.</p>
+      </div>
+      <div class="bigpic-card">
+        <h3>How it connects</h3>
+        <p>This chapter sits between Wundt's pure structuralism (Ch. 2) and the behaviourist turn that follows (Ch. 4). It explains <em>why</em> American psychology became applied while European psychology stayed pure — and provides the prejudice context for the racial bias examined in Ch. 7.</p>
+        <p>It also frames how Freud (Ch. 5) and Binet's testing tradition (Ch. 8 on factor analysis) developed in parallel to Wundt's model.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ 1 · HIGH-YIELD CONCEPTS ════════════════════ -->
+<section id="branches">
+  <div class="section-header">
+    <span class="section-num">1</span>
+    <h2>High-Yield Exam Concepts</h2>
+  </div>
+
+  <!-- ─────────── BRANCH 1 ─────────── -->
+  <div class="branch" data-branch="b1" id="branch-1">
+    <div class="branch-header">
+      <div class="branch-marker b1">I</div>
+      <div class="branch-meta">
+        <span class="eyebrow" style="color: var(--b1)">Branch One · Foundations</span>
+        <h3>The Pure vs Applied Divide</h3>
+        <p class="lede">Why Wundt insisted his new psychology be a "pure" science — and why the answer lies not in psychology but in European social class. This branch sets up the prejudice that everything else in the chapter pushes against.</p>
+      </div>
+    </div>
+
+    <div class="story b1">
+      In pre-industrial Europe, the gentry and aristocracy did no work; everyone else did. The unworking classes filled their days with non-applied activity (philosophy, classics, leisure with intellectual content), and the universities reflected this — they taught Latin, Greek, ancient history. <strong>Applied</strong> meant the workshop, the technical college, the lower orders. When Wundt founded experimental psychology in Leipzig in 1879, he had a strategic problem: to be taken seriously by the higher-status university world, his new discipline had to look <strong>pure</strong>. So he insisted it was. The terminology itself — pure, basic, fundamental versus applied — was already loaded with a social ranking before any psychologist used the words.
+    </div>
+
+    <div class="concepts" id="concepts-b1">
+
+      <details class="concept b1" data-branch="b1" data-keywords="prejudice prejudgement billig tajfel labelling">
+        <summary>
+          <span class="concept-num">01</span>
+          <span class="concept-title">Prejudice (the broad concept)</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>To prejudge something — to form a judgement based on prior beliefs rather than the evidence in front of you. Billig &amp; Tajfel (1973) showed that simply <em>labelling</em> something is enough to produce prejudgement, regardless of what the label is.</dd>
+            <dt>Explanation</dt>
+            <dd>Everyone makes prejudgements; the question is whether you are aware of them and whether you act on them. Awareness is the first step to reducing the effect. Prejudice takes many forms — racial, gender, religious, and the form this chapter foregrounds: <em>intellectual snobbery</em>.</dd>
+            <dt>Example</dt>
+            <dd>Wundt prejudging applied psychology as inferior before any evidence about whether applied psychology produced useful results.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. Define prejudice and explain how it operates in the history of psychology.</em></dd>
+            <dd class="model-answer">Prejudice is prejudgement based on prior beliefs rather than evidence. Billig and Tajfel demonstrated that even arbitrary labels produce prejudgement. In psychology this operated through intellectual snobbery: the prior belief that pure science was nobler than applied science led Wundt and the later Experimentalists to dismiss applied work and to exclude women, well before any evidence had been gathered about either.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b1" data-branch="b1" data-keywords="intellectual snobbery class european attitude">
+        <summary>
+          <span class="concept-num">02</span>
+          <span class="concept-title">Intellectual Snobbery</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>A specific form of prejudice in which non-applied, non-material intellectual activity is judged superior to applied or practical work — irrespective of the value either produces.</dd>
+            <dt>Explanation</dt>
+            <dd>This is the chapter's central concept. It is not racial, not gendered (initially), and not religious. It is class-rooted snobbery against work with practical purpose. It is the engine that drove Wundt's framing of psychology, the suppression of applied work in European universities, and (later) the exclusion of women from the Experimentalists.</dd>
+            <dt>Example</dt>
+            <dd>The English nineteenth-century university where engineering was taught with low status and barely featured in university life (Albu, 1980).</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. What is intellectual snobbery and how did it influence the development of psychology?</em></dd>
+            <dd class="model-answer">Intellectual snobbery is the prejudice that non-applied, non-material intellectual work is superior to applied work. It influenced psychology in three ways: it caused Wundt to frame his new discipline as a pure science to gain university acceptance; it caused Titchener's Experimentalists to exclude women from the Society of Experimental Psychologists because women were perceived to be too interested in helping people rather than in pure rigour; and it survives today in the form of university league tables that rank older, research-led institutions above newer applied ones.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b1" data-branch="b1" data-keywords="pure science wundt noble">
+        <summary>
+          <span class="concept-num">03</span>
+          <span class="concept-title">Pure / Basic / Fundamental Science</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>Three near-synonyms with different connotations. <em>Pure</em> implies noble and good (and that <em>applied</em> must therefore be dirty). <em>Basic</em> implies foundational — something done first. <em>Fundamental</em> implies the research deals with more general or important issues than applied work.</dd>
+            <dt>Explanation</dt>
+            <dd>All three terms reflect different attitudes from those who want to make the distinction. The fact that we have three different words for the non-applied side (and one for the applied side) is itself evidence of the snobbery.</dd>
+            <dt>Example</dt>
+            <dd>A physicist describing string theory as "fundamental physics" implicitly ranks it above engineering.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. Distinguish between pure, basic and fundamental science.</em></dd>
+            <dd class="model-answer">All three contrast with applied science but carry different connotations: pure suggests moral superiority, basic suggests temporal priority (done first), fundamental suggests greater importance. The proliferation of terms for non-applied research, set against the single word "applied", reflects the social attitude that non-applied work is more prestigious.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b1" data-branch="b1" data-keywords="wundt leipzig 1879 laboratory pure">
+        <summary>
+          <span class="concept-num">04</span>
+          <span class="concept-title">Wundt's Insistence on Pure Psychology</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>When Wundt founded the first experimental psychology laboratory in Leipzig (1879), he insisted his new psychology would be a pure science, not an applied one — a strategic choice to fit the high-status ethos of the German university.</dd>
+            <dt>Explanation</dt>
+            <dd>Wundt's reasoning is sociological, not scientific. In Germany, the elite was made up of lawyers, judges, university teachers and government officials (Ringer, 1967), not entrepreneurs. To win acceptance for psychology in this world, Wundt could not present it as a problem-solving discipline. Had he done so, psychology would have ended up in the lower-status technical college, not the university.</dd>
+            <dt>Example</dt>
+            <dd>Reaction-time research at Leipzig (mental chronometry) found applied use almost immediately — astronomers used it to correct telescope readings — but Wundt still framed the field as pure (Williams, 1912).</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. Why did Wundt insist that psychology be a pure rather than an applied science?</em></dd>
+            <dd class="model-answer">Wundt's decision was strategic and sociological rather than scientific. Pre-industrial European society ranked non-applied intellectual activity above applied work, and the German university elite consisted of officials and academics rather than entrepreneurs. To win the new discipline a place in the high-status university system, Wundt framed it as pure. Had he framed it as problem-solving, it would have been relegated to the technical colleges. Notably, his Leipzig research on reaction time produced applied results almost immediately, used by astronomers — showing that the pure framing was political rather than descriptive of the work itself.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b1" data-branch="b1" data-keywords="european social class gentry aristocracy applied">
+        <summary>
+          <span class="concept-num">05</span>
+          <span class="concept-title">European Social Class Structure</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>The pre-industrial European division between the landed gentry and aristocracy (who did no productive work) and everyone else (who provided for those who did not work).</dd>
+            <dt>Explanation</dt>
+            <dd>The gentry's leisure was filled with non-applied activity — often intellectual. The result was that "applied" came to mean lower-class, and "pure" to mean upper-class. Psychology inherited this ranking before it had any content of its own.</dd>
+            <dt>Example</dt>
+            <dd>The Indian caste system shows the same pattern in a different culture: Brahmins (priests, teachers, judges) sit at the top and are traditionally provided for by other castes; Dalits, who do the most menial work, are stigmatised. Different content, same structural snobbery.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. How did European social class structure influence the early development of psychology?</em></dd>
+            <dd class="model-answer">The pre-industrial European division between a non-working gentry and a working remainder produced a cultural ranking in which non-applied activity was prestigious and applied activity inferior. Universities were founded to teach the classics — the leisure pursuits of the upper class — while applied subjects went to lower-status technical colleges. When Wundt sought university recognition for psychology in 1879, this ranking forced him to frame the field as pure. The class system therefore determined the structure of the discipline before any empirical work had taken place.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b1" data-branch="b1" data-keywords="universities classics technical colleges board of trade">
+        <summary>
+          <span class="concept-num">06</span>
+          <span class="concept-title">Universities vs Technical Institutes</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>Universities were originally places of learning the classics (Roman and Greek plays, history, philosophy). Subjects with practical skills were taught in technical institutes or technical colleges.</dd>
+            <dt>Explanation</dt>
+            <dd>The institutional split mirrored the class split. The UK's Science and Art Department of the Board of Trade (founded 1853) and the Technical Instruction Act (1884) tried to support applied learning, but applied subjects were kept outside the university for most of the nineteenth century. The history of universities is one of slow absorption — physiotherapy became all-graduate only in 1992; nursing became degree-level only in 2000.</dd>
+            <dt>Example</dt>
+            <dd>Nineteenth-century English universities taught engineering with such low status that it "hardly featured in university life" (Albu, 1980).</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. Outline the historical relationship between universities and applied subjects.</em></dd>
+            <dd class="model-answer">Universities were originally places to study the classics, while applied subjects belonged to technical colleges. UK initiatives such as the Science and Art Department (1853) and the Technical Instruction Act (1884) supported applied learning outside the universities. Applied subjects have been gradually absorbed into the university system — engineering in the nineteenth century, physiotherapy in 1992, nursing in 2000 — reflecting a slow erosion of the snobbery that originally kept them out.</dd>
+          </dl>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ─────────── BRANCH 2 ─────────── -->
+  <div class="branch" data-branch="b2" id="branch-2">
+    <div class="branch-header">
+      <div class="branch-marker b2">II</div>
+      <div class="branch-meta">
+        <span class="eyebrow" style="color: var(--b2)">Branch Two · The American Response</span>
+        <h3>William James and Functionalism</h3>
+        <p class="lede">America inherited none of Europe's hereditary class system. American wealth was earned through practical success, so "applied" did not carry the same stigma. Out of this different soil grew a different psychology — one that asked not <em>what is the mind made of?</em> but <em>what is the mind for?</em></p>
+      </div>
+    </div>
+
+    <div class="story b2">
+      Wundt could not have founded an applied psychology in Germany without surrendering university status. <strong>James could not have founded a pure psychology in America</strong> without surrendering relevance. The structural difference between the two societies produced two competing paradigms — <strong>structuralism</strong> (Wundt, Titchener) and <strong>functionalism</strong> (James, Dewey, Angell). Both used introspection, but for different purposes. Behind James's functionalism stood Darwin (structures evolve because they are useful) and Peirce's pragmatism (beliefs and behaviours must serve survival). If physical structures have function, why not mental structures? This is the conceptual move that allowed American psychology to become applied without ceasing to be science.
+    </div>
+
+    <div class="concepts">
+
+      <details class="concept b2" data-branch="b2" data-keywords="american social structure practical wealth USA">
+        <summary>
+          <span class="concept-num">07</span>
+          <span class="concept-title">American Social Structure</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>Unlike Europe, where wealth and social class were hereditary, American wealth — and therefore social class — was based on practical (i.e. applied) success of varying kinds.</dd>
+            <dt>Explanation</dt>
+            <dd>Because applied success produced status in America, the prejudice that "pure" was better than "applied" was less common. The story of psychology's development in the USA is therefore connected strongly to its application to real-life problems.</dd>
+            <dt>Example</dt>
+            <dd>James, Dewey, Angell, Münsterberg, Witmer, Hall, and Scott all built applied or function-oriented programmes — something that would have been institutionally difficult in Wundt's Germany.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. Why did applied psychology develop earlier in the USA than in Europe?</em></dd>
+            <dd class="model-answer">American social class was based on practical success rather than hereditary entitlement, so applied work did not carry the stigma it carried in Europe. Psychology in the USA was therefore free to develop as an applied science from the outset, beginning with William James's lectures to teachers and continuing through Münsterberg's forensic work, Witmer's clinical clinic, Scott's industrial psychology and Hall's educational psychology. Europe, with its hereditary class system, retained the pure framing for much longer.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b2" data-branch="b2" data-keywords="william james 1842 1910 harvard father american psychology">
+        <summary>
+          <span class="concept-num">08</span>
+          <span class="concept-title">William James (1842–1910)</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>The father of psychology in America. James helped psychology become an applied science. Trained in medicine (MD, 1869), taught the first undergraduate course titled <em>Psychology</em> at Harvard in 1872, published <em>The Principles of Psychology</em> (1890) and <em>Talks to Teachers on Psychology</em> (1899).</dd>
+            <dt>Explanation</dt>
+            <dd>James faced the same problem as Wundt — making psychology a scientific discipline — but solved it differently. In America, science <em>solved problems</em>; psychology was a science because it too could solve problems. James also suffered from depression, gastric problems and what was then called neurasthenia (now ME/CFS), considered suicide on many occasions, and used his own experience to inform his work — including a paper provocatively titled "Is life worth living?" (1895).</dd>
+            <dt>Example</dt>
+            <dd>James's <em>Talks to Teachers</em> (1899) is based on lectures he gave to teachers — pure educational application of psychological theory.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. Compare Wundt and James as founders of psychology.</em></dd>
+            <dd class="model-answer">Wundt founded psychology institutionally in Europe by framing it as a pure science fit for the German university; James founded it in America by framing it as a problem-solving science fit for a society that valued practical success. Wundt studied the structure of consciousness for its own sake (structuralism); James argued that consciousness has a function and can be observed in use (functionalism). Wundt rejected the idea that consciousness flowed; James insisted that it did, supporting the coalescence rather than the brick-wall hypothesis. Both used introspection, but for different ends.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b2" data-branch="b2" data-keywords="darwin origin species 1859 evolution adaptation">
+        <summary>
+          <span class="concept-num">09</span>
+          <span class="concept-title">Darwin's Influence on James</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>Charles Darwin's <em>Origin of Species</em> (1859) showed that physical structures of animals are adapted to their use — for example, birds evolve bills suited to the food in their environment.</dd>
+            <dt>Explanation</dt>
+            <dd>If physical structures have function, James reasoned, mental structures might also have function. This was the conceptual hinge that turned introspection from a study of components (Wundt) into a study of use (James).</dd>
+            <dt>Example</dt>
+            <dd>James writes that "our sensations are here to attract us or deter us, our memories to warn or encourage us, our feelings to impel, and our thoughts to restrain our behaviour" (1899/1922, p. 24). Mental life is described as an adaptive system.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. How did Darwin influence the development of American psychology?</em></dd>
+            <dd class="model-answer">Darwin's argument that physical structures evolve because they are useful gave James the conceptual basis for treating mental structures the same way. If consciousness exists, it must have a function, and the proper subject of psychology is therefore not the components of consciousness (Wundt) but its uses. This move generated functionalism and made applied psychology a natural extension rather than a corruption of pure science.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b2" data-branch="b2" data-keywords="pragmatism peirce 1839 1914 philosophy mathematician">
+        <summary>
+          <span class="concept-num">10</span>
+          <span class="concept-title">Pragmatism (Charles Peirce)</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>A philosophy promoted by Charles Peirce (1839–1914), Harvard-educated philosopher, mathematician and friend of James, holding that any living organism must develop habitual behaviour that enables it to satisfy its needs.</dd>
+            <dt>Explanation</dt>
+            <dd>Pragmatism, like Darwinian biology, treats behaviour as something that must be useful — adaptive in some way. James combined pragmatism with Darwin to claim that the mind has a use and can be observed in use. The methodological consequence is that observing the mind <em>at work</em> is more revealing than observing it at rest.</dd>
+            <dt>Example</dt>
+            <dd>James's analysis of habit, native reactions, and learning all rest on the pragmatist premise that mental processes serve survival.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. What was pragmatism, and how did it shape American psychology?</em></dd>
+            <dd class="model-answer">Pragmatism was the philosophical view, promoted by Charles Peirce, that beliefs and behaviours must develop habitually because they enable an organism to satisfy its needs. It supplied James with a philosophical complement to Darwin's biology: the idea that mental life, like physical life, must be useful. Combined, the two gave functionalism its premise — that consciousness has a function — and justified the study of the mind in use, which is the foundation of applied American psychology.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b2" data-branch="b2" data-keywords="functionalism structuralism dewey angell apa 1906">
+        <summary>
+          <span class="concept-num">11</span>
+          <span class="concept-title">Functionalism vs Structuralism</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>Two competing paradigms at the end of the nineteenth and start of the twentieth century. <em>Structuralism</em> (Wundt, Titchener) studied the components of consciousness for their own sake. <em>Functionalism</em> (James, John Dewey, James Angell) studied what the mind is <em>for</em>. Angell coined the term in his 1906 American Psychological Association presidential address.</dd>
+            <dt>Explanation</dt>
+            <dd>Both used introspection but with different assumptions. Structuralism asked what consciousness is made of; functionalism asked what it does. The functionalist programme used a wider range of methods because it had to study the mind in real settings, not just the laboratory.</dd>
+            <dt>Example</dt>
+            <dd>A structuralist studies the visual sensation of "red" by asking subjects to introspect its qualities. A functionalist asks how vision helps a person navigate a street.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. Distinguish between structuralism and functionalism.</em></dd>
+            <dd class="model-answer">Structuralism, associated with Wundt and Titchener, studied the components of consciousness for their own sake using introspection in laboratory settings. Functionalism, advanced by James, Dewey and Angell, studied the function of the mind in controlling behaviour, again using introspection but with the assumption that mental processes are adaptive. Functionalism opened psychology to applied questions and to a wider range of investigative methods. Angell's 1906 APA presidential address formally named the approach.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b2" data-branch="b2" data-keywords="native reactions habits james education teachers">
+        <summary>
+          <span class="concept-num">12</span>
+          <span class="concept-title">Native Reactions vs Habits</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>James distinguished <em>native reactions</em> (instinctive responses to particular situations — curiosity, fear, imitation, ambition) from <em>habits</em> (acquired responses that, once formed, occur without conscious intention).</dd>
+            <dt>Explanation</dt>
+            <dd>James's educational advice was built on this distinction. Good habits in children are built by exploiting native reactions: the teacher should move about and introduce novelty (children have a native reaction to movement and change), keep voluntary attention engaged with new and interesting ideas, and connect new material to what the pupil already knows (learning by association, drawing on Herbart, 1776–1841).</dd>
+            <dt>Example</dt>
+            <dd>"You may take a horse to water, but you cannot make him drink; and so you may take a child to the schoolroom, but you cannot make him learn the new things you wish to impart, except by soliciting him in the first instance by something which natively makes him react" (James, 1899/1922, p. 39).</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. What advice did James give to teachers and on what theory was it based?</em></dd>
+            <dd class="model-answer">James advised teachers to build good habits in children by exploiting native reactions — instinctive responses such as curiosity, fear, imitation and ambition. Teachers should move about, introduce novelty, link new material to existing knowledge through association (drawing on Herbart's earlier theory), and avoid cramming because retained material is best linked to many other ideas. He also advised that motivation be redirected through substitution rather than inhibition. The advice was based on James's theory of habit and a partially evidence-based theory of memory, but James did not test the recommendations themselves with children — they remain theoretical deductions from sensible observations rather than research-based findings.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b2" data-branch="b2" data-keywords="stanley hall 1846 1924 johns hopkins clark adolescence apa">
+        <summary>
+          <span class="concept-num">13</span>
+          <span class="concept-title">Stanley Hall (1846–1924)</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>James's ex-pupil who set up the first US psychology laboratory at Johns Hopkins in 1883, founded the <em>American Journal of Psychology</em> (1887), founded the American Psychological Association (1892), and wrote a textbook on adolescence (1904) that influenced educational policy.</dd>
+            <dt>Explanation</dt>
+            <dd>Hall is the institutional administrator that James was not. The relationship between the two men was poor — Hall formed the APA when James was out of town (Taylor, 1995). Hall recommended sex-segregated schooling (1906), partly on his own personal and guilt-ridden feelings about sex (Graebner, 2006); modern educationalists do not generally support this. The work of James and Hall blurred any clear line between applied and non-applied psychology.</dd>
+            <dt>Example</dt>
+            <dd>Hall's 1904 textbook on adolescence argued that the period was characterised by heightened emotion and vigour — self-evidently true, as the chapter notes drily, but worth saying.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. Was the work of James and Hall applied psychology?</em></dd>
+            <dd class="model-answer">Their work certainly had application: James gave practical advice to teachers; Hall made recommendations about adolescent education. But neither tested their theories with the populations they advised, and Münsterberg's later definition of applied psychology — research designed from the outset to solve a practical problem — would exclude them. Their work is better described as theoretically driven advice with application, not applied psychology in the Münsterberg sense.</dd>
+          </dl>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ─────────── BRANCH 3 ─────────── -->
+  <div class="branch" data-branch="b3" id="branch-3">
+    <div class="branch-header">
+      <div class="branch-marker b3">III</div>
+      <div class="branch-meta">
+        <span class="eyebrow" style="color: var(--b3)">Branch Three · The Founders of Applied Psychology</span>
+        <h3>Pioneers of Applied Psychology</h3>
+        <p class="lede">If James and Hall blurred the line, four figures crossed it deliberately. Münsterberg defined applied psychology and showed its method. Witmer founded clinical work. Scott built industrial and consumer psychology. Binet built the first intelligence tests. The applied turn becomes operational here.</p>
+      </div>
+    </div>
+
+    <div class="story b3">
+      Münsterberg's contribution is conceptual: he <strong>defined</strong> applied psychology by intention. The applied researcher starts from the practical problem and designs the experiment around it, where the pure researcher starts from a phenomenon and worries about application later (if at all). With that definition in hand, the chapter walks through four operational implementations: <strong>forensic</strong> (Münsterberg himself, on witness reliability), <strong>clinical</strong> (Witmer, the first psychology clinic), <strong>industrial</strong> (Scott, advertising and personnel selection) and <strong>educational/intelligence</strong> (Binet, the first proper test). Each pioneer used research methods, not just observation. This is what distinguishes them from James and Hall.
+    </div>
+
+    <div class="concepts">
+
+      <details class="concept b3" data-branch="b3" data-keywords="munsterberg 1863 1916 freiberg harvard father applied">
+        <summary>
+          <span class="concept-num">14</span>
+          <span class="concept-title">Hugo Münsterberg (1863–1916)</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>The "father of applied psychology". German-born critic of Wundt who set up a psychology department at the University of Freiberg, then moved to Harvard at James's invitation in 1897. Took a particular interest in defining and promoting applied psychology.</dd>
+            <dt>Explanation</dt>
+            <dd>James was not personally interested in running a laboratory and felt Münsterberg was the man for the job — precisely because Münsterberg was a critic of Wundt and would not import the pure framing into Harvard. Münsterberg's <em>On the Witness Stand</em> (1908) is his best-known work and remains in print.</dd>
+            <dt>Example</dt>
+            <dd>Münsterberg organised a heated argument to be acted out in his lectures and asked students who did not know it was an act to write down what they had witnessed; descriptions were factually inaccurate.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. Why is Münsterberg called the father of applied psychology?</em></dd>
+            <dd class="model-answer">Münsterberg defined applied psychology in terms of intention — research designed from the outset to solve a practical problem — and gave applied psychology the same scientific status as pure psychology by analogy with engineering and physics. He demonstrated the model in forensic psychology by carrying out experiments on witness reliability, suggestibility, false confessions and lie detection, all of which produced principles still in use today. His combination of definition, demonstration and promotion is why he is described as the father of the field.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b3" data-branch="b3" data-keywords="munsterberg definition intention applied engineering physics">
+        <summary>
+          <span class="concept-num">15</span>
+          <span class="concept-title">Münsterberg's Definition of Applied Psychology</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>Applied psychology is research designed from the start to solve a practical problem. The defining feature is the <em>intention</em> of the researcher, not the topic studied or the method used.</dd>
+            <dt>Explanation</dt>
+            <dd>Münsterberg drew an analogy with physics and engineering. Engineering uses physics, but engineering also includes things that physics does not. Applied psychology will draw on basic psychology but go beyond it. The distinction is therefore not pure-versus-applied but <em>basic</em>-versus-applied — applied psychology solves problems that basic psychology does not solve.</dd>
+            <dt>Example</dt>
+            <dd>Münsterberg wrote: "What is needed is to adjust research to the practical problems themselves and thus, for instance, when education is in question, to start psychological experiments directly from educational problems" (1908, pp. 8–9).</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. How did Münsterberg define applied psychology?</em></dd>
+            <dd class="model-answer">Münsterberg defined applied psychology by the intention of the researcher: research designed from the outset to solve a practical problem. He distinguished it from experimental psychology by saying it is not enough to use ready-made results for ends not in view during the original experiments — applied psychology must adjust research to the practical problem itself. He used the analogy of engineering and physics: applied psychology stands to basic psychology as engineering stands to physics, drawing on the basic science but adding its own methods and concerns.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b3" data-branch="b3" data-keywords="forensic witness suggestibility false memory eyewitness">
+        <summary>
+          <span class="concept-num">16</span>
+          <span class="concept-title">Forensic Psychology &amp; Witness Reliability</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>Münsterberg's lasting empirical contribution. Through staged events in lectures and picture-recognition experiments, he showed that witnesses are unreliable, that people are suggestible (and children more so than adults), and that prejudice can affect memory.</dd>
+            <dt>Explanation</dt>
+            <dd>Münsterberg studied false confessions in the American criminal justice system, showing how people under pressure can imagine and report what they have not done. He also used an early lie-detection method based on word association — the rationale being that "dangerous" words (associated with guilt) produce longer reaction times than safe ones, and that safe words produce stable repeat associations while dangerous ones do not. (Freud later developed a similar method for a different purpose.)</dd>
+            <dt>Example</dt>
+            <dd>Picture-recognition study: participants were shown a picture, then asked questions about objects in and not in the picture. Many participants invented content — and Münsterberg quoted "all our prejudices and all our convictions work as such suggestions" (1908, p. 190).</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. What were Münsterberg's three principles of forensic psychology?</em></dd>
+            <dd class="model-answer">First, eyewitness testimony should be obtained as soon as possible after an event, because forgetting increases with time. Second, leading questions should not be asked, because they induce false memories. Third, witnesses can genuinely believe they saw something and swear that what they say is true even when their memory is false. These principles, drawn from his experiments on suggestibility, false confessions and association-based lie detection, remain foundational in forensic psychology today.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b3" data-branch="b3" data-keywords="munsterberg unpopular germany monsterbug munchausen world war">
+        <summary>
+          <span class="concept-num">17</span>
+          <span class="concept-title">Münsterberg's Decline</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>Münsterberg never integrated into American society and always hoped for a German post; James was irritated by his vain and self-aggrandising style. After he defended German intentions just before the First World War, he was ridiculed (letters addressed to "Dr Monsterbug" and "Baron Munchausen"). His papers were hardly cited after his death.</dd>
+            <dt>Explanation</dt>
+            <dd>The chapter uses this to show that even a founder of a field can be erased by the social context — a parallel to its main thesis about social attitudes shaping science. Münsterberg's contributions to applied psychology are major; his reputation almost vanished.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. Why did Münsterberg's reputation decline despite his contributions?</em></dd>
+            <dd class="model-answer">Münsterberg's reputation declined for reasons largely unrelated to the quality of his work. His personal style was vain and self-aggrandising, he never integrated into American society, and his defence of German intentions just before the First World War made him a target for ridicule. The case illustrates the chapter's broader argument that scientific reputation is shaped by social attitudes as much as by scientific contribution.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b3" data-branch="b3" data-keywords="witmer 1867 1956 first clinical pennsylvania 1896 dyslexia">
+        <summary>
+          <span class="concept-num">18</span>
+          <span class="concept-title">Lightner Witmer (1867–1956)</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>American psychologist who trained under Wundt in Leipzig but rejected the pure-only framing. Founded the world's first psychological clinic at the University of Pennsylvania in 1896 and coined the term <em>clinical psychology</em>.</dd>
+            <dt>Explanation</dt>
+            <dd>Witmer started in education — a teacher described a boy who had difficulty learning to spell (now called dyslexia), and Witmer met the child and tried to help. He then offered a course on how to work with students who were "mentally defective, blind, or criminally disturbed" (1896 wording), and built a residential school for children with intellectual or behavioural problems in 1908. His clinic was headed by a psychologist and staffed by psychologists — a starting point for psychologists rather than physicians managing mental illness.</dd>
+            <dt>Example</dt>
+            <dd>Witmer's clinic emphasised measurement, in particular physical and neurological traits. He first thought heredity was important but later concluded the environment was more important.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. What was Witmer's contribution to applied psychology?</em></dd>
+            <dd class="model-answer">Witmer founded the world's first psychological clinic in 1896 at the University of Pennsylvania, coined the term clinical psychology, and emphasised measurement of physical and neurological traits. He moved the treatment of mental illness from physicians towards psychologists and from a hereditary to an environmental account, building a residential school in 1908 for children with intellectual or behavioural problems. He thereby established a profession in which trained psychologists provided ways of measuring mental illness — even though, as Reisman (1991) notes, no specific psychological treatment yet existed. The introduction of measurement was itself the beginning of a scientific analysis of mental illness.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b3" data-branch="b3" data-keywords="moral treatment tuke york retreat dix asylum environment">
+        <summary>
+          <span class="concept-num">19</span>
+          <span class="concept-title">Moral Treatment</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>An earlier alternative to the biological/hereditary view of mental illness, developed by people from religious or non-medical backgrounds. William Tuke (1732–1822), a Quaker philanthropist, founded the York Retreat in England (1813), believing contact with a moral person would help "insane" people. Dorothea Dix (1802–1887) campaigned in the USA for better treatment of the mentally ill against the appalling conditions of asylums.</dd>
+            <dt>Explanation</dt>
+            <dd>If mental illness is purely genetic, little can be done; if it results from an unsatisfactory environment, improving the environment may help. Witmer adopted the environmentalist position but moved it from morality and religion into the scientific sphere. The same idea — that mentally ill people had learned things incorrectly — would later resurface in behaviourism (Ch. 4).</dd>
+            <dt>Example</dt>
+            <dd>The Bethlem Hospital (Bedlam) in London illustrated the failure of the biological/punitive approach: an 1815 parliamentary enquiry documented widespread abuse despite the Madhouses Act (1774). Voyeuristic public viewing of inmates was permitted until 1770; conditions were utter filth and neglect (Andrews et al., 2013).</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. What was moral treatment, and how did Witmer transform it?</em></dd>
+            <dd class="model-answer">Moral treatment was the view, advanced by William Tuke at the York Retreat and by Dorothea Dix in the USA, that mentally ill people would benefit from contact with a morally superior person and a humane environment, in contrast to the biological view that held them as hereditarily damaged and the asylum view that incarcerated them in appalling conditions. Witmer kept the environmentalist premise but stripped it of religious framing, replacing the morally superior helper with the trained psychologist and adding measurement. He thereby brought the environmentalist approach within the scientific sphere.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b3" data-branch="b3" data-keywords="walter dill scott 1869 1955 advertising industrial pears soap">
+        <summary>
+          <span class="concept-num">20</span>
+          <span class="concept-title">Walter Dill Scott (1869–1955)</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>Wundt-trained PhD who rejected Wundt's insistence on pure science. Appointed professor of applied psychology at Carnegie University, set up his own corporation in 1919 to develop industrial psychology. Made two main contributions: advertising and personnel testing.</dd>
+            <dt>Explanation</dt>
+            <dd>Scott believed "consumers are not rational beings and can be easily influenced". He developed direct-suggestion advertising (e.g. a Pears Soap ad with a picture and the line "Use Pears Soap"), advertisements with an emotional component aimed at women, and the idea of return coupons — the consumer takes a positive action and is therefore more likely to make a positive purchase later. (Green Shield stamps, introduced 1958, are a descendant.) For personnel testing, Scott asked employers to rate employees, then used questionnaire-based group tests to find items that distinguished good from bad employees, and used those items for selection.</dd>
+            <dt>Example</dt>
+            <dd>Scott used psychological theory to make advertising recommendations without testing them, but for personnel testing he used the same method as Witmer — assessment based on research methodology. Psychological assessment became a major factor in early-twentieth-century psychology.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. What were Scott's two contributions to industrial psychology?</em></dd>
+            <dd class="model-answer">Scott pioneered consumer advertising, building on the premise that consumers can be easily influenced. He developed direct-suggestion advertisements, emotional advertisements aimed at women, and return coupons that turn the consumer's positive action into a likely future purchase. His second contribution was personnel testing: he asked employers to rate employees, then used group questionnaire tests to find items that distinguished good from bad employees, and built selection tests on those items. The first contribution used theory without testing it; the second introduced research-based assessment, anticipating the broader role of psychological measurement in twentieth-century psychology.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b3" data-branch="b3" data-keywords="binet 1857 1911 france simon mental retarded education 1904">
+        <summary>
+          <span class="concept-num">21</span>
+          <span class="concept-title">Alfred Binet (1857–1911) &amp; the First Intelligence Tests</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>French psychologist, independently wealthy, director of the Laboratory of Physiological Psychology at the School of Advanced Studies (1894). When the French government introduced universal state education in the late nineteenth century, some children could not benefit; a 1904 commission was set up to investigate, and Binet was appointed because he was already working with the physician Théodore Simon (1873–1961) on measuring people then called "mentally retarded".</dd>
+            <dt>Explanation</dt>
+            <dd>Binet and Simon's first test was produced in 1905, with revisions in 1908 and 1911 (the year Binet died). Binet introduced about thirty different tests of mental faculties, including testing of higher mental facilities now standard. Crucially, Binet assumed there were many different mental faculties and that it was possible to be high on one and low on another. He was therefore <em>not</em> measuring intelligence as a single concept; the concept of general intelligence (the <em>g</em> factor) was introduced about twenty years later by Charles Spearman (1927).</dd>
+            <dt>Example</dt>
+            <dd>Binet wrote that his tests could not "make us know the totality of an intelligence." His aim was to measure the many faculties he thought were important to guide pupils through an educational system.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. How did Binet's view of intelligence differ from Spearman's?</em></dd>
+            <dd class="model-answer">Binet assumed intelligence consisted of many different mental faculties and that a person could be high on one and low on another; his test was a tool for guiding educational placement, not a single number representing total ability. Spearman, around twenty years later, used factor analysis to argue that scores on different mental faculties correlate, suggesting an underlying construct of general intelligence — the <em>g</em> factor. Spearman's view was used in the UK to allocate children to grammar, technical and secondary modern schools at age 11 under the Education Act 1944, a system later condemned as discriminatory and based on the incorrect assumption that intelligence remains constant as children grow.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b3" data-branch="b3" data-keywords="education act 1944 tripartite grammar technical secondary modern comprehensive 1965">
+        <summary>
+          <span class="concept-num">22</span>
+          <span class="concept-title">Education Act 1944 &amp; the Tripartite System</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>The UK Education Act 1944 introduced a tripartite system in which intelligence tests at age 11 allocated pupils to one of three school types: grammar, technical, or secondary modern.</dd>
+            <dt>Explanation</dt>
+            <dd>This system was condemned later as discriminatory and based on the incorrect assumption that intelligence remains constant as children grow older. Comprehensive schools (non-selective) were introduced in 1965 by the Labour government, but some grammar schools still exist, with both supporters and detractors. The system illustrates how Binet's measurement tool, applied through Spearman's interpretation of <em>g</em>, produced a piece of social policy with major life consequences.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. Should children be allocated to different schools based on their IQ?</em></dd>
+            <dd class="model-answer">The 1944 tripartite system did so, but was later condemned as discriminatory and based on the incorrect assumption that intelligence remains constant as children develop. The case illustrates a broader risk in applied psychology: a measurement tool, once produced, can be used in social policy in ways its originator did not intend. Binet himself thought of his tests as a tool to guide pupils <em>through</em> an educational system rather than to allocate them to entirely different ones. The application is therefore a question both of psychometric evidence and of values, and most modern educational systems have moved away from the tripartite model.</dd>
+          </dl>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ─────────── BRANCH 4 ─────────── -->
+  <div class="branch" data-branch="b4" id="branch-4">
+    <div class="branch-header">
+      <div class="branch-marker b4">IV</div>
+      <div class="branch-meta">
+        <span class="eyebrow" style="color: var(--b4)">Branch Four · Money, Status, and Method</span>
+        <h3>The Politics of Applied vs Pure Research</h3>
+        <p class="lede">Once you have applied pioneers producing demonstrable results, the political question is how to allocate funding. The UK story — polytechnics, RAE, REF — shows the slow transfer of status from pure to applied. Münsterberg's intention-based definition becomes a working tool, and Lewin gives the field its motto.</p>
+      </div>
+    </div>
+
+    <div class="story b4">
+      The chapter uses Swift's <em>Gulliver's Travels</em> (1726) — the flying island of Laputa, whose scientists extract sunbeams from cucumbers — as a satire on pure research's loss of touch with use. The UK government took roughly three centuries to act on the satire. The 1964 Labour government created polytechnics to "shake up" the educational system; in 1992 the polytechnics became universities and lost their applied identity (the universities, not the government, won that battle). But then the government changed the rules of the funding competition: <strong>the REF (2014)</strong> required universities to specify the impact of their research, not just publication output. Suddenly applied research had status it had not had before.
+    </div>
+
+    <div class="concepts">
+
+      <details class="concept b4" data-branch="b4" data-keywords="polytechnics 1964 cnaa harold wilson white heat technology">
+        <summary>
+          <span class="concept-num">23</span>
+          <span class="concept-title">Polytechnics &amp; the CNAA</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>Institutions for higher-level applied education, formed in the UK in the nineteenth century but expanded in 1964 by the Labour government to meet what Prime Minister Harold Wilson called "the white-hot heat of the technological revolution". The Council for National Academic Awards (CNAA) enabled polytechnics to award validated degrees.</dd>
+            <dt>Explanation</dt>
+            <dd>The intention was to forge ahead with applied topics. But polytechnics were seen as having lower status than universities (possibly because they lacked degree-awarding status until 1992). When they were converted to universities in 1992, the upgrading also meant their original applied aim was abandoned. The universities, not the government, had won.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. What was the polytechnic experiment and why did it fail?</em></dd>
+            <dd class="model-answer">In 1964 the Labour government expanded the UK polytechnic system to deliver applied higher education, with degrees validated by the CNAA. The intention was to give applied subjects an institutional home that would equal the universities. However, polytechnics were perceived as lower status — partly because they could not award their own degrees — and in 1992 they were converted to universities. The conversion preserved their teaching but abandoned their applied identity. The episode illustrates the persistence of the pure-applied snobbery: the universities won the status battle.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b4" data-branch="b4" data-keywords="rae research assessment exercise 1986 publication">
+        <summary>
+          <span class="concept-num">24</span>
+          <span class="concept-title">Research Assessment Exercise (RAE)</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>The original (1986) UK system for distributing research funding to universities. Allocation was based on output — primarily journal articles. Universities competed for money; quality was defined by the universities themselves.</dd>
+            <dt>Explanation</dt>
+            <dd>The RAE rewarded high-status publications in high-status journals. It therefore reinforced the pure-versus-applied hierarchy: applied work in less prestigious journals scored less well. Academics were encouraged to do high-status (i.e. pure) research.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. What was the RAE and what were its consequences?</em></dd>
+            <dd class="model-answer">The RAE was the UK's research funding allocation system from 1986. Universities were assessed every five years on the quality of their research, defined primarily by output in high-status journals. Because high-status journals favoured pure research, the RAE reinforced the pure-applied hierarchy and encouraged academics to pursue pure work. It also raised concerns that teaching was being sacrificed for research, since universities were rewarded only for the latter — a concern the government addressed later through the Teaching Excellence Framework.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b4" data-branch="b4" data-keywords="ref 2014 research excellence framework impact reach significance">
+        <summary>
+          <span class="concept-num">25</span>
+          <span class="concept-title">Research Excellence Framework (REF) &amp; Impact</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>The replacement for the RAE in 2014. The REF retained competition for research funding but required universities to specify how their research has made a beneficial impact on society at large.</dd>
+            <dt>Explanation</dt>
+            <dd>The 2020 REF committee defined research impact via two criteria: <em>reach</em> (the number of people affected by the change in practice) and <em>significance</em> (the degree of change). It must also be based on research — there must be a paper that justifies the change in practice. The 2022 REF gave a higher weighting to impact. Applied research therefore acquired a status in the UK university system it did not have under the RAE.</dd>
+            <dt>Example</dt>
+            <dd>By the REF criteria, neither James nor Hall created impact: they influenced practice, but the change in practice was not based on research, only on observation-based theory. Münsterberg, Witmer, Scott and Binet did create impact because their recommendations were research-based.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. How does the REF define research impact, and how should the contribution of applied research be assessed?</em></dd>
+            <dd class="model-answer">The 2020 REF committee defined research impact through reach (the number of people affected by a change in practice) and significance (the degree of change), with the additional requirement that the change be based on a research paper that justifies it. By this definition, William James and Stanley Hall did not create impact, despite influencing practice, because their advice rested on observation-based theory rather than tested research. Münsterberg, Witmer, Scott and Binet did create impact because their recommendations were grounded in experimental or assessment-based research. The REF therefore offers a workable, if narrow, criterion for assessing applied research, and has begun to undo the long-standing status gap between pure and applied work in the UK.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b4" data-branch="b4" data-keywords="translational research mobile phones quantum mechanics application">
+        <summary>
+          <span class="concept-num">26</span>
+          <span class="concept-title">Translational Research</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>Research that develops an application from non-applied research. The bridge between pure science and use.</dd>
+            <dt>Explanation</dt>
+            <dd>One argument for pure research is that it eventually has practical value. The chapter offers quantum mechanics: when first envisaged, no theoretical physicist thought it would end up in mobile phones a century later. But getting from theory to phone required additional research — the translation. Pure research alone does not produce application; translational research does. What happens in the laboratory may not happen in real life, so translational work is needed to confirm that predictions from non-applied research occur in real life.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. What is translational research, and why is it needed?</em></dd>
+            <dd class="model-answer">Translational research develops an application from non-applied research. It is needed because pure research alone does not produce practical use; theoretical findings have to be translated into something that works in real life. The history of science offers many examples — quantum mechanics, originally a theoretical project, eventually contributed to mobile phones, but only after extensive translational work. Translational research therefore explains how pure research can lead to applications without itself being applied research, and it justifies a continued role for pure research alongside applied work.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b4" data-branch="b4" data-keywords="three types research intention pure applied translational intrinsic extrinsic">
+        <summary>
+          <span class="concept-num">27</span>
+          <span class="concept-title">Three Types of Research Intention</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>Following Münsterberg, three types of research intention can be distinguished. <em>Non-applied (pure/basic/fundamental)</em>: aim is intrinsic — to understand psychological phenomena and advance knowledge, with no intention of extrinsic benefit. <em>Applied</em>: aim is extrinsic — to find a solution to a practical problem (intrinsic knowledge may result, but is not the goal). <em>Translational</em>: aim is to use research findings developed by intrinsic-knowledge researchers and provide evidence of extrinsic benefit.</dd>
+            <dt>Explanation</dt>
+            <dd>Most psychological research falls into the first two categories. The framework gives Münsterberg's intention-based definition a working structure. It also reframes the chapter's central tension: it is not pure-versus-applied but a continuum of intrinsic and extrinsic motivation, with translational research as the bridge.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. Distinguish the three types of research intention.</em></dd>
+            <dd class="model-answer">Non-applied research (also called pure, basic or fundamental) has an intrinsic aim: to understand psychological phenomena and advance knowledge, with no intention of extrinsic benefit. Applied research has an extrinsic aim: to solve a practical problem, although intrinsic knowledge may result as a by-product. Translational research has the bridging aim of taking findings developed by intrinsic-knowledge researchers and providing evidence of extrinsic benefit — confirming that laboratory predictions occur in real life. The framework formalises Münsterberg's intention-based definition and accommodates the long-standing argument that pure research eventually has applied value through the translational link.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b4" data-branch="b4" data-keywords="lewin 1943 nothing so practical as a good theory">
+        <summary>
+          <span class="concept-num">28</span>
+          <span class="concept-title">Lewin's Dictum</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>Kurt Lewin's famous statement: "there is nothing so practical as a good theory" (Lewin, 1943a, p. 118). A good theory is practical.</dd>
+            <dt>Explanation</dt>
+            <dd>Connects to Lakatos's analysis (Ch. 1) that theory-led research programmes (progressive problem shift) are more effective than data-led ones (degenerating problem shift). The conclusion: theory-led research is better both for solving practical problems and for scientific advance. As a science develops and becomes more theoretical, the pure/applied distinction matters less, because there is nothing so practical as a good theory.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. What does Lewin mean by "there is nothing so practical as a good theory"?</em></dd>
+            <dd class="model-answer">Lewin meant that a well-developed theory is the most practical tool available, because it allows reliable prediction across the range of cases the theory covers, rather than the case-by-case fixes that data-led research provides. The dictum aligns with Lakatos's distinction between progressive (theory-led) and degenerating (data-led) research programmes: theory-led work is better for both scientific advance and practical application. The implication for psychology is that as the discipline becomes more theoretical, the pure-applied distinction loses force, because good theory is itself applicable.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b4" data-branch="b4" data-keywords="tef teaching excellence framework research nexus">
+        <summary>
+          <span class="concept-num">29</span>
+          <span class="concept-title">Teaching Excellence Framework (TEF)</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>UK government competition rewarding teaching quality, introduced after concerns that the RAE/REF was leading universities to sacrifice teaching quality for research output.</dd>
+            <dt>Explanation</dt>
+            <dd>The TEF is a follow-on policy: having found that competitions work (the RAE and REF demonstrably changed university behaviour), the government created a competition for teaching too. The episode confirms the chapter's thesis that funding mechanisms shape what universities do, and that what gets rewarded gets done.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. Why was the TEF introduced?</em></dd>
+            <dd class="model-answer">The TEF was introduced because the success of the RAE and REF in shaping university behaviour around research quality had a side-effect: teaching quality was being sacrificed for research output, since only the latter was rewarded. The government responded by creating a parallel competition for teaching, on the same logic that what gets rewarded gets done. The TEF illustrates how funding incentives function as a powerful tool of policy on universities — the same dynamic that produced the original pure-applied hierarchy under the RAE.</dd>
+          </dl>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ─────────── BRANCH 5 ─────────── -->
+  <div class="branch" data-branch="b5" id="branch-5">
+    <div class="branch-header">
+      <div class="branch-marker b5">V</div>
+      <div class="branch-meta">
+        <span class="eyebrow" style="color: var(--b5)">Branch Five · The Cost of Snobbery</span>
+        <h3>Prejudice and Discrimination Against Women</h3>
+        <p class="lede">The chapter saves its most explicit prejudice for last. The same intellectual snobbery that elevated pure over applied also constructed science as masculine and excluded women from its institutions. The Experimentalists are the case study; Boring's "brass instruments" remark is the smoking gun.</p>
+      </div>
+    </div>
+
+    <div class="story b5">
+      Two organisations dominated American psychology. <strong>Titchener's Society of Experimental Psychologists</strong> (founded 1904) supported Wundt's pure-science framing. <strong>The American Psychological Association</strong> (founded 1892) drew the functionalists and the applied workers, and later the behaviourists. The two organisations had different attitudes to women. The Experimentalists excluded women altogether until 1928, and even then only two were admitted in subservient roles; no other woman was admitted for a further 21 years. Why? Because the Experimentalists perceived the practice of science as a masculine occupation, and women — interested in helping people — disqualified themselves. The mechanism is exactly the intellectual snobbery from Branch 1: kindness for humanity is pure science's opposite.
+    </div>
+
+    <div class="concepts">
+
+      <details class="concept b5" data-branch="b5" data-keywords="experimentalists titchener 1904 society excluded women">
+        <summary>
+          <span class="concept-num">30</span>
+          <span class="concept-title">The Experimentalists (Titchener)</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>The Society of Experimental Psychologists, founded by Edward Titchener in 1904 to support Wundt's pure-science framing in America. Members called themselves "The Experimental Psychologists". Known in textbooks as the structuralists.</dd>
+            <dt>Explanation</dt>
+            <dd>The Experimentalists were trying to join the masculine science club by conducting experiments consistent with the high status of pure science. Excluding women was not incidental — it was the entry fee. The bias against women was explicit and referred to as the "woman problem" — the problem being that women wanted to become psychologists.</dd>
+            <dt>Example</dt>
+            <dd>Women were excluded altogether until 1928; in that year only two women were admitted, in subservient roles; no other woman was admitted for 21 years, until Eleanor Gibson (later the visual-cliff researcher with infants).</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. Why did the Experimentalists exclude women?</em></dd>
+            <dd class="model-answer">The Experimentalists, led by Titchener and later Boring, framed science as a masculine activity defined by pure rigour and lack of interest in helping people. Women were excluded because they were perceived as more interested in human beings than in apparatus — a stance Boring made explicit in his oral-history remark that women were not good manipulators of apparatus and "love human beings so that they haven't time for brass instruments." Exclusion was therefore not incidental but constitutive: it was how the Experimentalists demarcated themselves as a high-status pure-science club. The mechanism is the same intellectual snobbery that elevated pure over applied work — kindness towards humanity is the disqualifier.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b5" data-branch="b5" data-keywords="apa 1892 stanley hall mary calkins 1905 first female president">
+        <summary>
+          <span class="concept-num">31</span>
+          <span class="concept-title">APA &amp; Mary Calkins (1905)</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>The American Psychological Association, founded in 1892 with Stanley Hall as its first president, focused on behaviour and applications of psychology. Mary Calkins became its 14th president, and first female president, in 1905.</dd>
+            <dt>Explanation</dt>
+            <dd>Calkins had worked with Münsterberg, who described her as the strongest student in his laboratory. She was not awarded a degree from Harvard because Harvard did not accept women. The APA was less discriminatory than Harvard, but men still far outnumbered women as APA presidents up to 2000. The contrast between APA and the Experimentalists demonstrates that the discrimination by the Experimentalists was more extreme than the historical bias of the time — a deliberate amplification, not a passive reflection.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. Compare the APA and the Society of Experimental Psychologists in their treatment of women.</em></dd>
+            <dd class="model-answer">The APA, founded in 1892, was associated with functionalism and applied work; it elected Mary Calkins as its 14th president in 1905, making her the first female president of the organisation. The Society of Experimental Psychologists, founded in 1904 by Titchener to support Wundt's pure-science framing, excluded women altogether until 1928, admitted only two women in subservient roles in that year, and admitted no other woman until Eleanor Gibson 21 years later. The contrast shows that the discrimination by the Experimentalists exceeded the prevailing societal bias of the time — it was constitutive of their claim to pure-science status.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b5" data-branch="b5" data-keywords="beatrice edgell uk 1901 british psychological society first professor">
+        <summary>
+          <span class="concept-num">32</span>
+          <span class="concept-title">Beatrice Edgell (UK)</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>One of the ten founders of the British Psychological Society (1901), the first woman in the UK to receive a PhD for psychology, and the first British professor of psychology. She was president of the BPS between 1928 and 1932.</dd>
+            <dt>Explanation</dt>
+            <dd>The Australian Psychological Society became independent from the BPS in 1966 and appointed its first female president, Mary Nixon, in 1971. The pattern of low representation of women in psychology organisations reflected — but was not identical to — broader societal discrimination.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. Outline the role of women in early UK and Australian psychological organisations.</em></dd>
+            <dd class="model-answer">Beatrice Edgell was one of ten founders of the British Psychological Society in 1901, the first UK woman to receive a PhD for psychology, the first British professor of psychology, and BPS president from 1928 to 1932. The Australian Psychological Society became independent from the BPS in 1966 and appointed its first female president, Mary Nixon, in 1971. These figures show that women played an early role in establishing professional psychology, even though their representation remained low and reflected the broader societal discrimination of the period — though, importantly, the discrimination by the American Experimentalists was more extreme than this baseline.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b5" data-branch="b5" data-keywords="boring 1886 1968 brass instruments quote rutherford">
+        <summary>
+          <span class="concept-num">33</span>
+          <span class="concept-title">Edwin Boring &amp; the "Brass Instruments" Quote</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>Edwin Boring (1886–1968), highly respected and influential in early-twentieth-century American psychology, took over leadership of the Experimentalists from Titchener. When the first women were finally accepted, Boring noted with approval that they accepted their inferior status. In an oral history he is reported to have said:</dd>
+            <dt>Explanation</dt>
+            <dd>"the experimentalists in the development of psychology tells against women and against Jews because Jews are not good manipulators of apparatus. I swear there's something there. Again and again. It may be that they just love human beings so that they haven't time for brass instruments." (Rutherford, 2015, p. 57). Boring presents both an anti-women and an anti-Jewish prejudice, on the same logic: real science is impersonal manipulation of apparatus, and groups associated with humanism are unsuited to it.</dd>
+            <dt>Example</dt>
+            <dd>The mechanism is identical to the anti-applied prejudice from Branch 1 and the anti-women prejudice in this branch — kindness, humanity, and love of humans are the disqualifiers from "real" science.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. What does Boring's "brass instruments" remark reveal about the prejudice of the Experimentalists?</em></dd>
+            <dd class="model-answer">Boring's remark reveals that the Experimentalists' prejudice was not narrowly directed at women but at any group associated with humanism. He reasoned that women and Jews loved human beings too much to have time for the apparatus of pure science. The remark shows that the same logic structured anti-women prejudice, anti-Jewish prejudice, and the anti-applied prejudice that defined the Experimentalists' identity. All three exclusions are produced by intellectual snobbery — the prior belief that pure, impersonal, masculine activity is superior to applied, humanistic, and female activity. Awareness of this shared mechanism is what allows the chapter to argue that the underlying problem is intellectual snobbery, not gender bias alone.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b5" data-branch="b5" data-keywords="aps american psychological society 1988 modern equivalent">
+        <summary>
+          <span class="concept-num">34</span>
+          <span class="concept-title">APS — The Modern Experimentalists?</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>The American Psychological Society, formed in 1988, the modern equivalent of the Experimentalists, giving scientists the autonomy they felt they were lacking in the APA.</dd>
+            <dt>Explanation</dt>
+            <dd>Crucially, there has never been any suggestion that the APS is anti-women. Gender is irrelevant to the pure-versus-applied distinction. It was intellectual snobbery, not anything inherent in pure research, that fuelled the discrimination against women in the past. Today many more female than male students apply for psychology courses; female psychologists are often in the majority in professional roles. Psychology is a kinder discipline now and recognises bias against minority groups.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. Is the discrimination against women in early psychology a feature of pure science itself?</em></dd>
+            <dd class="model-answer">No. The American Psychological Society, formed in 1988 as the modern equivalent of the Experimentalists, gives scientists the autonomy the Experimentalists wanted, but has never been described as anti-women. This shows that pure science as such is gender-neutral. The earlier discrimination was driven by intellectual snobbery — the prior belief that real science must be impersonal and that humanistic concern with people disqualifies one from doing it. Once that prejudice is removed, the structural connection between pure research and the exclusion of women dissolves, as the modern composition of the discipline demonstrates.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b5" data-branch="b5" data-keywords="gender attainment maths spatial literacy johnson voyer">
+        <summary>
+          <span class="concept-num">35</span>
+          <span class="concept-title">Evidence on Gender Differences in Attainment</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>The chapter summarises the evidence base briefly: girls are better than boys at maths at all ages except kindergarten; boys are better than girls at all ages for spatial skills; girls are better than boys at all ages for literacy skills; and in overall grades girls have a small advantage over boys (Johnson et al., 2022; Voyer &amp; Voyer, 2014).</dd>
+            <dt>Explanation</dt>
+            <dd>These findings are based on mean scores, but the means have large standard deviations, so there is considerable overlap. There is also a large effect of socioeconomic status on academic attainment. The conclusion: sex should not be used as a criterion for any form of intellectual selection. The idea that girls are not as bright as boys, or make worse scientists, is a prejudice contrary to the evidence.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. What does the evidence show about gender differences in academic attainment?</em></dd>
+            <dd class="model-answer">The evidence, summarised by Johnson et al. (2022) and Voyer and Voyer (2014), shows that girls outperform boys in maths at all ages except kindergarten, in literacy at all ages, and in overall grades by a small margin; boys outperform girls in spatial skills at all ages. These findings rest on mean scores with large standard deviations, so there is substantial overlap, and socioeconomic status has a large effect on attainment. The conclusion is that sex should not be used as a criterion for any form of intellectual selection. The view that girls are less bright or make worse scientists is contrary to the evidence; it is a prejudice, supportable only through the kinds of belief-against-evidence mechanisms described in Chapter 1.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b5" data-branch="b5" data-keywords="kindness antidote prejudice tolerance virtue">
+        <summary>
+          <span class="concept-num">36</span>
+          <span class="concept-title">Kindness as Antidote to Prejudice</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>The chapter's normative conclusion. The opposite of prejudice is kindness — kindness to all fellow human beings. Prejudice against women, like other forms of prejudice based on race, religion or nationality, is an unkindness that stems from false beliefs. Kindness is the antidote.</dd>
+            <dt>Explanation</dt>
+            <dd>Adds to the recommendation in Chapter 1 of tolerance as a human virtue, and frames the chapter's lesson for life. Awareness of one's own prejudgements, plus a deliberate practice of kindness, is the proposed counter-strategy.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. What does the chapter recommend as a response to prejudice?</em></dd>
+            <dd class="model-answer">The chapter recommends kindness — kindness to all fellow human beings — as the antidote to prejudice. Prejudice is an unkindness that stems from false beliefs, and kindness is its inverse. Combined with the recommendation of tolerance from Chapter 1 and the awareness of one's own prejudgements, this gives the chapter's normative position: prejudice can be reduced through awareness, tolerance and kindness, and the discrimination that still occurs in some countries is contrary to the evidence provided by scientific investigation.</dd>
+          </dl>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- ─────────── BRANCH 6 ─────────── -->
+  <div class="branch" data-branch="b6" id="branch-6">
+    <div class="branch-header">
+      <div class="branch-marker b6">VI</div>
+      <div class="branch-meta">
+        <span class="eyebrow" style="color: var(--b6)">Branch Six · The Snobbery That Survived</span>
+        <h3>Modern Academic Snobbery — League Tables</h3>
+        <p class="lede">The pure-versus-applied prejudice gradually faded. The gender prejudice was largely (though not wholly) addressed. But intellectual snobbery survived in another form — the university league tables, which rank universities by research output and influence the behaviour of leaders, lecturers and prospective students alike.</p>
+      </div>
+    </div>
+
+    <div class="story b6">
+      The same logic that originally elevated Wundt's Leipzig over the technical college now elevates the <strong>Russell Group</strong> in the UK and the <strong>Ivy League</strong> in the USA. Rankings are usually based on a combination of metrics, of which research output is most important. The teaching-research nexus — the claim that research-strong universities provide better teaching — is the rationalisation. The evidence does not support it (McKenzie et al., 2018; Teichler et al., 2022; Palali et al., 2018; Wolszczak-Derlacz, 2014). Better researchers sometimes receive worse teaching ratings. The chapter ends by reminding the student that what matters is what <em>you</em> make of your education — not the status of the institution.
+    </div>
+
+    <div class="concepts">
+
+      <details class="concept b6" data-branch="b6" data-keywords="university league tables rankings public russell ivy">
+        <summary>
+          <span class="concept-num">37</span>
+          <span class="concept-title">University League Tables</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>Public rankings of universities by an aggregated quality metric. Most advanced countries have national league tables; there are also global rankings. Research output is usually the most important component.</dd>
+            <dt>Explanation</dt>
+            <dd>Rankings are made public without the public understanding what counts as "good". They influence behaviour: university leaders, lecturers and prospective students all respond to them. They are the modern surviving form of intellectual snobbery — older, research-led institutions sit at the top and have higher entry requirements.</dd>
+            <dt>Example</dt>
+            <dd>In the UK the Russell Group; in the USA the Ivy League. Private US universities (which include the Ivies) charge higher fees than state universities.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. How do university league tables function as a form of intellectual snobbery?</em></dd>
+            <dd class="model-answer">League tables aggregate metrics — most importantly research output — into a public ranking that the public is not given the means to understand. They influence the behaviour of university leaders, lecturers and prospective students, with older research-led institutions sitting at the top. The Russell Group in the UK and the Ivy League in the USA are the most prestigious clusters, with higher entry requirements and (in the US private case) higher fees. Because the ranking favours research over teaching and older over newer institutions, the league tables reproduce the same hierarchy that produced Wundt's framing of pure science: high status for research, lower status for teaching and applied work.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b6" data-branch="b6" data-keywords="teaching research nexus mckenzie teichler evidence">
+        <summary>
+          <span class="concept-num">38</span>
+          <span class="concept-title">Teaching-Research Nexus</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>The hypothesis that research supports teaching: that good researchers will know more about their subject and be more motivated, and will therefore provide students with a better education.</dd>
+            <dt>Explanation</dt>
+            <dd>This hypothesis is what justifies high spending on research at institutions where teaching generates substantial income. The evidence does not support it. Several studies find little relationship between research and teaching skills (McKenzie et al., 2018; Teichler et al., 2022). In some cases, better researchers receive worse student ratings (Palali et al., 2018) and produce worse outcomes (Wolszczak-Derlacz, 2014).</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. What is the teaching-research nexus, and is it supported by evidence?</em></dd>
+            <dd class="model-answer">The teaching-research nexus is the hypothesis that research strength produces better teaching, on the basis that good researchers know their subject better and are more motivated. It is used to justify high spending on research at universities that earn most of their income from teaching. The evidence does not support it: McKenzie et al. (2018) and Teichler et al. (2022) find little relationship between research and teaching skill, while Palali et al. (2018) and Wolszczak-Derlacz (2014) find that better researchers can receive worse student ratings and produce worse outcomes. The hypothesis therefore functions as a rationalisation of the existing status hierarchy rather than a description of educational reality.</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="concept b6" data-branch="b6" data-keywords="student wellbeing depression suicide james gunnell">
+        <summary>
+          <span class="concept-num">39</span>
+          <span class="concept-title">Student Wellbeing &amp; the James Lesson</span>
+          <span class="toggle-icon">+</span>
+        </summary>
+        <div class="concept-body">
+          <dl>
+            <dt>Definition</dt>
+            <dd>The chapter closes with a passage on student depression and suicide. Suicide rates are lower in university students than in the equivalent age outside higher education (Gunnell et al., 2020), but every suicide is a tragedy.</dd>
+            <dt>Explanation</dt>
+            <dd>The author returns to William James, who considered suicide on many occasions, was depressed, suffered fatigue, and thought his work had little value. History has shown his self-doubt was wrong. The intended message: the status of your university does not determine the quality of your education or your happiness; reach out and ask for help if you are unhappy; depression distorts your view of your own worth.</dd>
+            <dt>Exam application</dt>
+            <dd><em>Q. What is the chapter's "lesson for life"?</em></dd>
+            <dd class="model-answer">Two things can be different without one being better than the other. Men and women are different, but make equally good psychologists and scientists. Be aware of intellectual snobbery — it is one of the less attractive features of university life. Non-judgemental kindness is a virtue. The status of your university does not determine the quality of the education you receive; what determines it is what you make of the opportunities. And, drawing on the example of William James, depression distorts the perception of one's own worth; help should be sought if needed, because things will always seem worse when one is depressed.</dd>
+          </dl>
+        </div>
+      </details>
+    </div>
+  </div>
+
+</section>
+
+<!-- ════════════════════ 2 · COMMON STUDENT MISTAKES ════════════════════ -->
+<section id="mistakes">
+  <div class="section-header">
+    <span class="section-num">2</span>
+    <h2>Common Student Mistakes</h2>
+  </div>
+
+  <div class="mistakes-grid">
+
+    <div class="mistake">
+      <h4>1 · Confusing structuralism with functionalism</h4>
+      <div class="wrong"><span class="label">Mistake</span>"Structuralism studied behaviour and functionalism studied the mind."</div>
+      <div class="right"><span class="label">Correction</span>Both used introspection to study consciousness. Structuralism (Wundt, Titchener) studied the <em>components</em> of consciousness; functionalism (James, Dewey, Angell) studied what consciousness is <em>for</em>. Behaviour-only psychology came later, with behaviourism (Ch. 4).</div>
+    </div>
+
+    <div class="mistake">
+      <h4>2 · Treating James and Münsterberg as equivalent applied psychologists</h4>
+      <div class="wrong"><span class="label">Mistake</span>"James and Münsterberg both founded applied psychology."</div>
+      <div class="right"><span class="label">Correction</span>James gave practical advice but did not test his theories with the populations he advised. Münsterberg defined applied psychology by intention and tested his recommendations with experiments. By Münsterberg's own definition, James's work would not count as applied psychology.</div>
+    </div>
+
+    <div class="mistake">
+      <h4>3 · Thinking Binet measured "intelligence"</h4>
+      <div class="wrong"><span class="label">Mistake</span>"Binet measured general intelligence (the g factor)."</div>
+      <div class="right"><span class="label">Correction</span>Binet explicitly assumed there were many different mental faculties and that one could be high on one and low on another. The <em>g</em> factor was introduced by Spearman about 20 years later. Binet's tests were a tool to guide pupils through an educational system, not a single measure of intelligence.</div>
+    </div>
+
+    <div class="mistake">
+      <h4>4 · Reading "pure" as a scientific term</h4>
+      <div class="wrong"><span class="label">Mistake</span>"Pure psychology is more scientifically rigorous than applied psychology."</div>
+      <div class="right"><span class="label">Correction</span>"Pure" is a social label, not a scientific term. The point of the chapter is that the word reflects intellectual snobbery, not method. Applied research can be just as rigorous; the distinction is intention, not quality.</div>
+    </div>
+
+    <div class="mistake">
+      <h4>5 · Thinking the bias against women was just "the times"</h4>
+      <div class="wrong"><span class="label">Mistake</span>"The Experimentalists' exclusion of women just reflected the prevailing bias of the era."</div>
+      <div class="right"><span class="label">Correction</span>The APA (founded 1892) elected Mary Calkins as its first female president in 1905; it was less discriminatory than Harvard. The Experimentalists excluded women altogether until 1928. Their discrimination was <em>more</em> extreme than the prevailing societal bias — it was constitutive of their identity as a pure-science club.</div>
+    </div>
+
+    <div class="mistake">
+      <h4>6 · Confusing impact, applied research, and translational research</h4>
+      <div class="wrong"><span class="label">Mistake</span>"Applied research and impact are the same thing."</div>
+      <div class="right"><span class="label">Correction</span>Three different concepts. <em>Applied research</em> is research designed from the start to solve a practical problem (Münsterberg). <em>Translational research</em> develops applications from non-applied findings. <em>Impact</em> is the REF criterion for a research-based change in practice, measured by reach and significance.</div>
+    </div>
+
+    <div class="mistake">
+      <h4>7 · Confusing pure with basic with fundamental</h4>
+      <div class="wrong"><span class="label">Mistake</span>"Pure, basic and fundamental science are exactly the same."</div>
+      <div class="right"><span class="label">Correction</span>They are near-synonyms but with different connotations. Pure → noble. Basic → done first. Fundamental → more general/important. The proliferation of terms is itself part of the snobbery the chapter is critiquing.</div>
+    </div>
+
+    <div class="mistake">
+      <h4>8 · Believing the teaching-research nexus</h4>
+      <div class="wrong"><span class="label">Mistake</span>"Better-research universities provide a better education."</div>
+      <div class="right"><span class="label">Correction</span>Several empirical studies (McKenzie et al., 2018; Teichler et al., 2022; Palali et al., 2018; Wolszczak-Derlacz, 2014) find little relationship between research strength and teaching quality, with some evidence that strong researchers receive worse student ratings. The nexus is unsupported.</div>
+    </div>
+
+    <div class="mistake">
+      <h4>9 · Thinking Wundt was anti-application</h4>
+      <div class="wrong"><span class="label">Mistake</span>"Wundt thought psychology had no use."</div>
+      <div class="right"><span class="label">Correction</span>Wundt's research had immediate use — astronomers used his reaction-time work to correct telescope readings (Williams, 1912). His insistence on framing psychology as <em>pure</em> was a strategic choice to fit the German university, not a claim that psychology could not be applied.</div>
+    </div>
+
+    <div class="mistake">
+      <h4>10 · Forgetting that bias and method can come apart</h4>
+      <div class="wrong"><span class="label">Mistake</span>"Pure science is inherently sexist because the Experimentalists were."</div>
+      <div class="right"><span class="label">Correction</span>The modern APS (1988) is the structural successor of the Experimentalists and has never been described as anti-women. Pure science is gender-neutral; it was intellectual snobbery — the belief that humanism disqualifies one from real science — that produced the original discrimination.</div>
+    </div>
+
+    <div class="mistake">
+      <h4>11 · Treating Münsterberg's decline as scientific failure</h4>
+      <div class="wrong"><span class="label">Mistake</span>"Münsterberg was forgotten because his ideas were wrong."</div>
+      <div class="right"><span class="label">Correction</span>His three forensic principles (eyewitness urgency, no leading questions, sincere false memory) remain foundational. He was forgotten for personal and political reasons — vanity, failure to integrate, and his defence of Germany before WWI — illustrating exactly the chapter's thesis that social attitudes shape scientific reputation.</div>
+    </div>
+
+    <div class="mistake">
+      <h4>12 · Thinking Boring's bias was only against women</h4>
+      <div class="wrong"><span class="label">Mistake</span>"Boring's brass-instruments quote was about women."</div>
+      <div class="right"><span class="label">Correction</span>The quote is explicit about both women and Jews — both, in his view, "love human beings so that they haven't time for brass instruments." The shared mechanism is intellectual snobbery: anyone associated with humanism is disqualified from "real" science.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════ 3 · QUICK REFERENCE TABLES ════════════════════ -->
+<section id="tables">
+  <div class="section-header">
+    <span class="section-num">3</span>
+    <h2>Quick Reference Tables</h2>
+  </div>
+
+  <div class="table-wrap">
+    <h4>Table 1 · The Pioneers at a Glance</h4>
+    <table>
+      <thead><tr><th>Pioneer</th><th>Dates</th><th>Field founded</th><th>Method</th><th>Key contribution</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Wundt</strong></td><td>1832–1920</td><td>Pure experimental psychology</td><td>Introspection (structural)</td><td>First lab, Leipzig 1879. Strategic framing as pure.</td></tr>
+        <tr><td><strong>James</strong></td><td>1842–1910</td><td>American functionalism</td><td>Introspection + observation</td><td>Mind has function. Talks to Teachers (1899).</td></tr>
+        <tr><td><strong>Hall</strong></td><td>1846–1924</td><td>Educational, developmental</td><td>Theory + observation</td><td>First US lab (1883). Founded APA (1892). Adolescence textbook.</td></tr>
+        <tr><td><strong>Münsterberg</strong></td><td>1863–1916</td><td>Applied; forensic</td><td>Experiment in applied setting</td><td>Defined applied psychology. <em>On the Witness Stand</em> (1908).</td></tr>
+        <tr><td><strong>Witmer</strong></td><td>1867–1956</td><td>Clinical psychology</td><td>Measurement + assessment</td><td>First psychology clinic, Pennsylvania 1896.</td></tr>
+        <tr><td><strong>Scott</strong></td><td>1869–1955</td><td>Industrial psychology</td><td>Theory + assessment</td><td>Advertising principles + personnel selection.</td></tr>
+        <tr><td><strong>Binet</strong></td><td>1857–1911</td><td>Psychological testing</td><td>Test construction</td><td>First intelligence test (1905, with Simon).</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-wrap">
+    <h4>Table 2 · Wundt vs James — Founders Compared</h4>
+    <table>
+      <thead><tr><th></th><th>Wundt (Leipzig)</th><th>James (Harvard)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Year of first course</strong></td><td>1879</td><td>1872 (within philosophy)</td></tr>
+        <tr><td><strong>Society</strong></td><td>European, hereditary class</td><td>American, practical class</td></tr>
+        <tr><td><strong>Strategic framing</strong></td><td>Pure science</td><td>Problem-solving science</td></tr>
+        <tr><td><strong>Question</strong></td><td>What is the mind made of?</td><td>What is the mind for?</td></tr>
+        <tr><td><strong>Paradigm</strong></td><td>Structuralism</td><td>Functionalism</td></tr>
+        <tr><td><strong>View of consciousness</strong></td><td>Brick wall (components)</td><td>Coalescence (stream)</td></tr>
+        <tr><td><strong>Influences</strong></td><td>German philosophy, physiology</td><td>Darwin, Peirce's pragmatism</td></tr>
+        <tr><td><strong>Major work</strong></td><td><em>Principles of Physiological Psychology</em></td><td><em>The Principles of Psychology</em> (1890); <em>Talks to Teachers</em> (1899)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-wrap">
+    <h4>Table 3 · Three Types of Research Intention</h4>
+    <table>
+      <thead><tr><th></th><th>Aim</th><th>Motivation</th><th>Example in chapter</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Non-applied (pure / basic / fundamental)</strong></td><td>Understand psychological phenomena</td><td>Intrinsic — advance knowledge</td><td>Wundt on reaction time</td></tr>
+        <tr><td><strong>Applied</strong></td><td>Solve a practical problem</td><td>Extrinsic — useful outcome</td><td>Münsterberg on eyewitness reliability</td></tr>
+        <tr><td><strong>Translational</strong></td><td>Use intrinsic findings to produce extrinsic benefit</td><td>Bridging — link theory to practice</td><td>Quantum mechanics → mobile phones</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-wrap">
+    <h4>Table 4 · UK Research Funding Mechanisms</h4>
+    <table>
+      <thead><tr><th>Mechanism</th><th>Year</th><th>Criterion</th><th>Effect on pure/applied status</th></tr></thead>
+      <tbody>
+        <tr><td><strong>RAE</strong> (Research Assessment Exercise)</td><td>1986</td><td>Research output (journal articles)</td><td>Reinforced pure-research status</td></tr>
+        <tr><td><strong>REF 2014</strong> (Research Excellence Framework)</td><td>2014</td><td>Output + impact (reach + significance, research-based)</td><td>Raised applied research status</td></tr>
+        <tr><td><strong>REF 2022</strong></td><td>2022</td><td>Higher weighting on impact</td><td>Further raised applied status</td></tr>
+        <tr><td><strong>TEF</strong> (Teaching Excellence Framework)</td><td>Recent</td><td>Teaching quality</td><td>Counterweight to research-only incentives</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-wrap">
+    <h4>Table 5 · APA vs Society of Experimental Psychologists</h4>
+    <table>
+      <thead><tr><th></th><th>APA</th><th>Experimentalists</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Founded</strong></td><td>1892</td><td>1904</td></tr>
+        <tr><td><strong>Founder</strong></td><td>Stanley Hall</td><td>Edward Titchener</td></tr>
+        <tr><td><strong>Theoretical orientation</strong></td><td>Functionalism, applied, behaviourism</td><td>Structuralism (pure, Wundtian)</td></tr>
+        <tr><td><strong>First female president</strong></td><td>Mary Calkins, 1905</td><td>Women excluded until 1928 (subservient role)</td></tr>
+        <tr><td><strong>Treatment of women</strong></td><td>Less discriminatory than Harvard</td><td>Excluded; "woman problem" framing</td></tr>
+        <tr><td><strong>Modern descendant</strong></td><td>Continues today</td><td>APS (1988) — not anti-women</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-wrap">
+    <h4>Table 6 · Münsterberg's Three Forensic Principles</h4>
+    <table>
+      <thead><tr><th>Principle</th><th>Underlying experiment</th><th>Modern relevance</th></tr></thead>
+      <tbody>
+        <tr><td><strong>1.</strong> Obtain eyewitness testimony as soon as possible after the event</td><td>Forgetting increases over time (drawing on Ebbinghaus)</td><td>Standard police practice</td></tr>
+        <tr><td><strong>2.</strong> Do not ask leading questions</td><td>Picture-recognition study showing invented content for "not present" objects</td><td>Standard interview protocol; false-memory research (Principe &amp; Schindewolf, 2012)</td></tr>
+        <tr><td><strong>3.</strong> Witnesses can sincerely believe a false memory</td><td>Suggestibility experiments; "all our prejudices and convictions work as such suggestions"</td><td>Foundation of modern eyewitness scepticism</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-wrap">
+    <h4>Table 7 · Branch Cross-References</h4>
+    <table>
+      <thead><tr><th>Branch</th><th>Connects forward to</th><th>Connects back to</th></tr></thead>
+      <tbody>
+        <tr><td><strong>I — Pure vs Applied</strong></td><td>All other branches (sets the central tension)</td><td>Ch. 1 (philosophy of science); Ch. 2 (Wundt)</td></tr>
+        <tr><td><strong>II — Functionalism</strong></td><td>Ch. 4 (behaviourism inherits the applied turn)</td><td>Branch I (American response to European snobbery)</td></tr>
+        <tr><td><strong>III — Applied Pioneers</strong></td><td>Ch. 5 (Freud + Münsterberg's lie-detection); Ch. 8 (Spearman, factor analysis)</td><td>Branch II (operationalises functionalism's applied turn)</td></tr>
+        <tr><td><strong>IV — Politics of Research</strong></td><td>Modern UK university funding</td><td>Branch I (snobbery survives in funding rules)</td></tr>
+        <tr><td><strong>V — Prejudice vs Women</strong></td><td>Ch. 7 (racial prejudice; same mechanism)</td><td>Branch I (intellectual snobbery is the engine)</td></tr>
+        <tr><td><strong>VI — Modern Snobbery</strong></td><td>Ch. 1 (belief vs evidence on teaching-research nexus)</td><td>All branches (snobbery in its current institutional form)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</section>
+
+<!-- ════════════════════ 4 · FINAL CHECKLIST ════════════════════ -->
+<section id="checklist">
+  <div class="section-header">
+    <span class="section-num">4</span>
+    <h2>Final Exam Preparation Checklist</h2>
+  </div>
+
+  <div class="checklist">
+    <div class="check-col">
+      <h4>Definitions I can state precisely</h4>
+      <label><input type="checkbox"><span>Prejudice (with Billig &amp; Tajfel, 1973)</span></label>
+      <label><input type="checkbox"><span>Intellectual snobbery</span></label>
+      <label><input type="checkbox"><span>Pure / Basic / Fundamental science (the three connotations)</span></label>
+      <label><input type="checkbox"><span>Functionalism vs Structuralism</span></label>
+      <label><input type="checkbox"><span>Münsterberg's intention-based definition of applied psychology</span></label>
+      <label><input type="checkbox"><span>Translational research</span></label>
+      <label><input type="checkbox"><span>Impact (reach + significance, research-based)</span></label>
+      <label><input type="checkbox"><span>Teaching-research nexus</span></label>
+    </div>
+
+    <div class="check-col">
+      <h4>Names &amp; dates I can recall</h4>
+      <label><input type="checkbox"><span>Wundt — Leipzig 1879</span></label>
+      <label><input type="checkbox"><span>James — Harvard 1872 (course); Principles 1890; Talks to Teachers 1899</span></label>
+      <label><input type="checkbox"><span>Hall — Johns Hopkins lab 1883; APA 1892</span></label>
+      <label><input type="checkbox"><span>Münsterberg — Harvard 1897; On the Witness Stand 1908</span></label>
+      <label><input type="checkbox"><span>Witmer — first clinic 1896, Pennsylvania</span></label>
+      <label><input type="checkbox"><span>Binet &amp; Simon — first test 1905</span></label>
+      <label><input type="checkbox"><span>Calkins — first female APA president 1905</span></label>
+      <label><input type="checkbox"><span>Edgell — BPS founder 1901; first BPS female president 1928–32</span></label>
+      <label><input type="checkbox"><span>RAE 1986 → REF 2014 → REF 2022</span></label>
+    </div>
+
+    <div class="check-col">
+      <h4>Arguments I can construct</h4>
+      <label><input type="checkbox"><span>Why Wundt chose pure over applied (sociological argument)</span></label>
+      <label><input type="checkbox"><span>How Darwin + Peirce produced functionalism in James</span></label>
+      <label><input type="checkbox"><span>Why James &amp; Hall do not count as applied psychology by Münsterberg's standard</span></label>
+      <label><input type="checkbox"><span>How Witmer transformed moral treatment into clinical science</span></label>
+      <label><input type="checkbox"><span>How the REF raised the status of applied research</span></label>
+      <label><input type="checkbox"><span>Why the Experimentalists' bias was more extreme than its era</span></label>
+      <label><input type="checkbox"><span>How the Boring quote shows the shared mechanism for anti-women and anti-applied prejudice</span></label>
+      <label><input type="checkbox"><span>Why league tables are intellectual snobbery's modern survival</span></label>
+    </div>
+
+    <div class="check-col">
+      <h4>Distinctions I can draw cleanly</h4>
+      <label><input type="checkbox"><span>Structuralism vs Functionalism (both use introspection)</span></label>
+      <label><input type="checkbox"><span>Native reactions vs Habits (James)</span></label>
+      <label><input type="checkbox"><span>Binet's many faculties vs Spearman's g factor</span></label>
+      <label><input type="checkbox"><span>Pure / applied / translational research</span></label>
+      <label><input type="checkbox"><span>RAE (output) vs REF (output + impact)</span></label>
+      <label><input type="checkbox"><span>APA vs Society of Experimental Psychologists</span></label>
+      <label><input type="checkbox"><span>Tripartite system 1944 vs comprehensive 1965</span></label>
+      <label><input type="checkbox"><span>Polytechnics 1964 vs universities 1992 (the conversion)</span></label>
+    </div>
+
+    <div class="check-col">
+      <h4>Quotes I could deploy</h4>
+      <label><input type="checkbox"><span>James (1899/1922, p. 24): sensations attract / memories warn / feelings impel / thoughts restrain</span></label>
+      <label><input type="checkbox"><span>James on horse / child &amp; native reactions (p. 39)</span></label>
+      <label><input type="checkbox"><span>James on connection vs impression (p. 143)</span></label>
+      <label><input type="checkbox"><span>Münsterberg (1908, pp. 8–9): research adjusted to practical problems</span></label>
+      <label><input type="checkbox"><span>Münsterberg (1908, p. 190): "all our prejudices … work as such suggestions"</span></label>
+      <label><input type="checkbox"><span>Boring (Rutherford, 2015, p. 57): "brass instruments" quote</span></label>
+      <label><input type="checkbox"><span>Lewin (1943a, p. 118): "nothing so practical as a good theory"</span></label>
+    </div>
+
+    <div class="check-col">
+      <h4>Connections to other chapters</h4>
+      <label><input type="checkbox"><span>Ch. 1: Belief-vs-evidence (used to explain teaching-research nexus failure)</span></label>
+      <label><input type="checkbox"><span>Ch. 1: Lakatos progressive vs degenerating (links to Lewin's dictum)</span></label>
+      <label><input type="checkbox"><span>Ch. 2: Wundt's brick-wall hypothesis vs James's coalescence</span></label>
+      <label><input type="checkbox"><span>Ch. 4: Behaviourist take-up of the applied turn</span></label>
+      <label><input type="checkbox"><span>Ch. 5: Freud's word association vs Münsterberg's lie detection</span></label>
+      <label><input type="checkbox"><span>Ch. 7: Racial prejudice — same mechanism, different target</span></label>
+      <label><input type="checkbox"><span>Ch. 8: Spearman's factor analysis &amp; the g factor</span></label>
+    </div>
+
+    <div class="check-col">
+      <h4>Discussion-question ready</h4>
+      <label><input type="checkbox"><span>How did Münsterberg define applied psychology and what was his contribution?</span></label>
+      <label><input type="checkbox"><span>What advice did James give to teachers — and was it good advice?</span></label>
+      <label><input type="checkbox"><span>How and why have attitudes to pure vs applied research changed over time?</span></label>
+      <label><input type="checkbox"><span>What proportion of funding should go to pure vs applied research, and why?</span></label>
+      <label><input type="checkbox"><span>How should the contribution of applied research be assessed?</span></label>
+      <label><input type="checkbox"><span>Should children be allocated to schools based on their IQ?</span></label>
+      <label><input type="checkbox"><span>What examples of intellectual snobbery do I see in my own field?</span></label>
+    </div>
+
+    <div class="check-col">
+      <h4>The chapter's "lesson for life"</h4>
+      <label><input type="checkbox"><span>Two things can differ without one being better</span></label>
+      <label><input type="checkbox"><span>Men &amp; women make equally good psychologists and scientists</span></label>
+      <label><input type="checkbox"><span>Be aware of intellectual snobbery — one of the less attractive features of university life</span></label>
+      <label><input type="checkbox"><span>Non-judgemental kindness is a virtue</span></label>
+      <label><input type="checkbox"><span>The status of your university does not determine the quality of your education</span></label>
+      <label><input type="checkbox"><span>Look out for people who are struggling and offer help</span></label>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="ornament">✦</div>
+  <p>Chapter Three · How do social attitudes influence science?</p>
+  <p style="margin-top: 0.5rem; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; font-style: normal; color: var(--ink-dim);">History &amp; Methods in Psychology · Study Platform</p>
+</footer>
+
+<script>
+// Live search across concept titles, definitions, keywords
+const search = document.getElementById('search');
+const concepts = document.querySelectorAll('.concept');
+const branches = document.querySelectorAll('.branch');
+const chips = document.querySelectorAll('.chip');
+
+let activeFilter = 'all';
+let searchTerm = '';
+
+function applyFilters() {
+  const q = searchTerm.toLowerCase().trim();
+
+  // Hide/show concepts by combined filter + search
+  concepts.forEach(c => {
+    const branch = c.getAttribute('data-branch');
+    const branchOk = activeFilter === 'all' || branch === activeFilter;
+
+    let textOk = true;
+    if (q) {
+      const text = (c.textContent + ' ' + (c.getAttribute('data-keywords') || '')).toLowerCase();
+      textOk = text.includes(q);
+    }
+
+    c.setAttribute('data-hidden', branchOk && textOk ? 'false' : 'true');
+    if (q && textOk) c.setAttribute('open', '');
+    else if (q) c.removeAttribute('open');
+  });
+
+  // Hide branches with no visible concepts (under filter, not search)
+  branches.forEach(b => {
+    const branch = b.getAttribute('data-branch');
+    if (activeFilter !== 'all' && branch !== activeFilter) {
+      b.setAttribute('data-hidden', 'true');
+    } else {
+      b.setAttribute('data-hidden', 'false');
+    }
+  });
+}
+
+search.addEventListener('input', e => {
+  searchTerm = e.target.value;
+  applyFilters();
+});
+
+chips.forEach(chip => {
+  chip.addEventListener('click', () => {
+    chips.forEach(c => c.setAttribute('data-active', 'false'));
+    chip.setAttribute('data-active', 'true');
+    activeFilter = chip.getAttribute('data-filter');
+    applyFilters();
+  });
+});
+
+// Persist checkbox state in memory for the session
+const boxes = document.querySelectorAll('.check-col input[type="checkbox"]');
+boxes.forEach((box, i) => {
+  box.addEventListener('change', () => {
+    // Visual update only — state persists on page only
+  });
+});
+</script>
+
+</body>
+</html>
